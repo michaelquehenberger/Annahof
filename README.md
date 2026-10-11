@@ -1,11 +1,10 @@
 # HTML & CSS – Übungen
 
 Übungsprojekt für HTML (später CSS), bearbeitet mit VSCodium.
-https://michaelquehenberger.github.io/Annahof/ 
+https://michaelquehenberger.github.io/Annahof/
 https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-de
 
-
-
+📖 **HTML-Lernprotokoll (Schritt-für-Schritt-Anleitung):** [anleitung.md](anleitung.md)
 
 ## Ordnerstruktur
 
