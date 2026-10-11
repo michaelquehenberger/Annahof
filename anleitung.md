@@ -20,9 +20,9 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 6 | Branch `main` anlegen | ✅ |
 | 7 | GitHub Pages einschalten | ✅ |
 | 8 | Übung 1a: Liste mit Hobbys | ✅ |
-| 9 | Default branch auf `main` stellen | ⏳ als Nächstes |
-| 10 | Claudes Änderungen per Pull Request übernehmen | ⏳ als Nächstes |
-| 11 | Übung 1b: Absatz und Link | ⬜ |
+| 9 | Default branch auf `main` stellen | ✅ |
+| 10 | Claudes Änderungen per Pull Request übernehmen | ✅ |
+| 11 | Übung 1b: Absatz und Link | ⏳ als Nächstes |
 | 12 | Bilder | ⬜ |
 | 13 | Tabellen | ⬜ |
 | 14 | Seitenaufbau | ⬜ |
