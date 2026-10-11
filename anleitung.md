@@ -28,7 +28,78 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 14 | Seitenaufbau | ⬜ |
 | 15 | CSS | ⬜ |
 
-Am Ende: **Täglicher Arbeitsablauf** und **HTML-Spickzettel** zum Nachschlagen.
+Direkt danach: **Grundregeln für Ordnerstruktur und Dateinamen**. Am Ende: **Täglicher Arbeitsablauf** und **HTML-Spickzettel** zum Nachschlagen.
+
+---
+
+## Grundregeln: Ordnerstruktur und Dateinamen
+
+Diese Regeln gelten für das ganze Projekt. Ich lege sie einmal fest und halte mich immer daran – wer später umbenennt oder verschiebt, macht Links kaputt.
+
+### Meine Ordnerstruktur
+
+```
+Annahof/
+├── index.html              Startseite = Inhaltsverzeichnis aller Übungen
+├── README.md               kurze Projektbeschreibung (für GitHub)
+├── anleitung.md            dieses Lernprotokoll
+├── css/                    später: style.css (gilt für alle Seiten)
+├── bilder/                 Bilder, die mehrere Seiten nutzen
+└── uebungen/
+    ├── 01-erste-seite/
+    │   └── index.html
+    ├── 02-bilder/
+    │   ├── index.html
+    │   └── bilder/         nur Bilder dieser einen Übung
+    ├── 03-tabellen/
+    │   └── index.html
+    └── 04-seitenaufbau/
+        └── index.html
+```
+
+### Die 6 Regeln
+
+1. **`index.html` ist die Standardseite eines Ordners.** Ruft man einen Ordner im Browser auf, zeigt der Server automatisch dessen `index.html`:
+   - `…/Annahof/` → `index.html` im Hauptordner (Startseite)
+   - `…/Annahof/uebungen/01-erste-seite/` → `index.html` in diesem Ordner
+
+   Die Startseite heißt also **immer** `index.html` und liegt ganz oben.
+2. **Dateinamen klein, ohne Leerzeichen, Umlaute und Sonderzeichen.** Wörter mit Bindestrich verbinden.
+   - ✅ `ueber-mich.html`, `foto-skifahren.jpg`
+   - ❌ `Über Mich.html`, `Foto 1.JPG`
+
+   Webserver unterscheiden Groß-/Kleinschreibung: `Foto.jpg` und `foto.jpg` sind zwei verschiedene Dateien.
+3. **Jede Dateiart in ihren Ordner:** Bilder → `bilder/`, CSS → `css/`. HTML-Seiten dorthin, wo sie inhaltlich hingehören.
+4. **Ein Ordner pro Übung, nummeriert mit führender Null:** `01-…`, `02-…`, … `10-…` – so stimmt die Reihenfolge im Explorer (ohne Null käme `10` vor `2`).
+5. **Nur relative Pfade:** `href="uebungen/01-erste-seite/"` statt voller Adresse. So funktioniert die Seite überall gleich – Live Server, iPad, GitHub Pages.
+   - `bilder/foto.jpg` → Ordner `bilder` im selben Ordner
+   - `../` → einen Ordner nach oben
+   - `../../css/style.css` → zwei Ordner nach oben, dann in `css`
+6. **Struktur früh festlegen, dann nicht mehr ändern.** Umbenennen oder Verschieben macht alle Links darauf kaputt.
+
+### Die Startseite als Inhaltsverzeichnis
+
+`index.html` im Hauptordner verlinkt auf jede Übung. Bei jeder neuen Übung kommt ein Listenpunkt dazu:
+
+```html
+<h2>Meine Übungen</h2>
+<ul>
+  <li><a href="uebungen/01-erste-seite/">Übung 1: Über mich</a></li>
+  <li><a href="uebungen/02-bilder/">Übung 2: Bilder</a></li>
+</ul>
+```
+
+Jede Übungsseite hat unten einen Link zurück: `<a href="../../">Zurück zur Startseite</a>`
+
+### Neue Übung anlegen (in vscode.dev)
+
+1. Im Explorer auf den Ordner `uebungen` tippen, dann oben auf das Symbol **Neuer Ordner** (Ordner mit „+“) → Name z. B. `02-bilder`.
+2. Den neuen Ordner antippen, dann **Neue Datei** (Blatt mit „+“) → `index.html`.
+3. In der leeren Datei `!` + **Tab** → Grundgerüst. `lang="de"` und den `<title>` anpassen.
+4. In der Startseite `index.html` einen Link auf die neue Übung ergänzen.
+5. **Commit und Push.**
+
+> ℹ️ **Leere Ordner speichert Git nicht.** Ein Ordner wird erst hochgeladen, wenn eine Datei darin liegt. Deshalb steckt in `bilder/` die unsichtbare Platzhalterdatei `.gitkeep`.
 
 ---
 
@@ -160,43 +231,43 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 
 **Ausprobieren:** `<ul>` gegen `<ol>` tauschen → nummerierte Liste.
 
-## Schritt 9: Default branch auf `main` stellen ⏳
+## Schritt 9: Default branch auf `main` stellen ✅
 
 **Warum:** Solange der Default noch der `claude/…`-Zweig ist, landen Änderungen, die ich direkt auf github.com mache, dort – und nicht auf `main` und meiner Webseite.
 
-- [ ] github.com → Repository **Annahof** → **Settings** (Zahnrad oben).
-- [ ] Links ist **General** schon ausgewählt. Abschnitt **Default branch** suchen (weit oben).
-- [ ] Rechts daneben auf das **Pfeil-Symbol ⇄** („Switch to another branch“) tippen.
-- [ ] Im Menü **`main`** auswählen → **Update**.
-- [ ] Warnhinweis („I understand, update the default branch“) bestätigen.
+- [x] github.com → Repository **Annahof** → **Settings** (Zahnrad oben).
+- [x] Links ist **General** schon ausgewählt. Abschnitt **Default branch** suchen (weit oben).
+- [x] Rechts daneben auf das **Pfeil-Symbol ⇄** („Switch to another branch“) tippen.
+- [x] Im Menü **`main`** auswählen → **Update**.
+- [x] Warnhinweis („I understand, update the default branch“) bestätigen.
 
 **Woran ich erkenne, dass es geklappt hat:** Unter „Default branch“ steht `main`. Auf der Code-Seite des Repos ist oben links `main` ausgewählt.
 
-## Schritt 10: Claudes Änderungen per Pull Request übernehmen ⏳
+## Schritt 10: Claudes Änderungen per Pull Request übernehmen ✅
 
 **Warum:** Claude legt Dateien (wie dieses Protokoll) auf seinem eigenen Zweig `claude/html-basics-vscodium-zio2y2` ab. Erst nach dem Übernehmen („Merge“) sind sie auf `main` – und damit in meinem Editor und auf meiner Webseite.
 
 **Pull Request anlegen** (entfällt, wenn Claude ihn schon angelegt hat → weiter bei „Übernehmen“):
 
-- [ ] github.com → Repository **Annahof** → Reiter **Pull requests** → grüner Button **New pull request**.
-- [ ] Oben zwei Auswahlfelder einstellen: **base: `main`** ← **compare: `claude/html-basics-vscodium-zio2y2`**.
-- [ ] Darunter erscheinen die Änderungen (grün = neu, rot = entfernt). Kurz durchsehen.
-- [ ] **Create pull request** → Titel lassen oder z. B. „Lernprotokoll übernehmen“ → nochmals **Create pull request**.
+- [x] github.com → Repository **Annahof** → Reiter **Pull requests** → grüner Button **New pull request**.
+- [x] Oben zwei Auswahlfelder einstellen: **base: `main`** ← **compare: `claude/html-basics-vscodium-zio2y2`**.
+- [x] Darunter erscheinen die Änderungen (grün = neu, rot = entfernt). Kurz durchsehen.
+- [x] **Create pull request** → Titel lassen oder z. B. „Lernprotokoll übernehmen“ → nochmals **Create pull request**.
 
 **Übernehmen:**
 
-- [ ] Im Pull Request nach unten scrollen → grüner Button **Merge pull request** → **Confirm merge**.
-- [ ] Danach erscheint „Pull request successfully merged and closed“. Den Button „Delete branch“ brauche ich nicht zu tippen.
+- [x] Im Pull Request nach unten scrollen → grüner Button **Merge pull request** → **Confirm merge**.
+- [x] Danach erscheint „Pull request successfully merged and closed“. Den Button „Delete branch“ brauche ich nicht zu tippen.
 
 **Im Editor aktualisieren:**
 
-- [ ] vscode.dev neu laden (oder unten links neben `main` auf das Kreis-Pfeil-Symbol 🔄 tippen).
+- [x] vscode.dev neu laden (oder unten links neben `main` auf das Kreis-Pfeil-Symbol 🔄 tippen).
 
 **Woran ich erkenne, dass es geklappt hat:** Im Explorer erscheint `anleitung.md`. Auf github.com ist sie in `main` sichtbar und wird dort schön formatiert angezeigt. In vscode.dev: Rechtsklick auf `anleitung.md` → **Vorschau öffnen**.
 
 **Merke:** Immer wenn Claude etwas für mich ändert, kommt es auf diesem Weg zu mir: Pull Request → Merge → Editor aktualisieren.
 
-## Schritt 11: Übung 1b – Absatz und Link ⬜
+## Schritt 11: Übung 1b – Absatz und Link ⏳
 
 Datei: `uebungen/01-erste-seite/index.html`
 
@@ -212,21 +283,27 @@ Datei: `uebungen/01-erste-seite/index.html`
 
 ## Schritt 12: Bilder ⬜
 
-- [ ] Ein Bild in den Ordner `bilder/` hochladen.
-- [ ] Einbinden mit `<img src="../../bilder/foto.jpg" alt="Beschreibung">` (`alt` = Text für Screenreader bzw. wenn das Bild fehlt).
+Neue Übung `uebungen/02-bilder/` anlegen (siehe „Neue Übung anlegen“ oben) und auf der Startseite verlinken.
+
+- [ ] Ein Bild in den Ordner `uebungen/02-bilder/bilder/` hochladen.
+- [ ] Einbinden mit `<img src="bilder/foto.jpg" alt="Beschreibung">` (`alt` = Text für Screenreader bzw. wenn das Bild fehlt).
 
 ## Schritt 13: Tabellen ⬜
+
+Neue Übung `uebungen/03-tabellen/`.
 
 - [ ] `<table>`, `<tr>` (Zeile), `<th>` (Kopfzelle), `<td>` (Zelle)
 
 ## Schritt 14: Seitenaufbau ⬜
 
+Neue Übung `uebungen/04-seitenaufbau/`.
+
 - [ ] `<header>`, `<nav>`, `<main>`, `<footer>`
 
 ## Schritt 15: CSS ⬜
 
-- [ ] Eigene Datei `style.css` anlegen.
-- [ ] Im `<head>` einbinden: `<link rel="stylesheet" href="style.css">`
+- [ ] Ordner `css/` im Hauptordner anlegen, darin `style.css`.
+- [ ] Im `<head>` einbinden – Startseite: `<link rel="stylesheet" href="css/style.css">`, Übungsseiten: `<link rel="stylesheet" href="../../css/style.css">`
 - [ ] Farben, Schrift, Layout gestalten.
 
 ---
@@ -302,7 +379,7 @@ Datei: `uebungen/01-erste-seite/index.html`
 ### Regeln
 - Jedes geöffnete Tag wird geschlossen: `<p>` … `</p>` (Ausnahmen: `<br>`, `<img>`, `<meta>`)
 - Richtig verschachteln: `<li><strong>…</strong></li>` ✅ – nicht `<li><strong>…</li></strong>` ❌
-- Dateinamen klein, ohne Leerzeichen und Umlaute: `ueber-mich.html`
+- Dateinamen klein, ohne Leerzeichen und Umlaute: `ueber-mich.html` (alle Regeln: siehe „Grundregeln“ oben)
 - `&lt;` und `&gt;` zeigen `<` und `>` als Text an
 
 ---
