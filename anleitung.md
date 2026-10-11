@@ -28,7 +28,7 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 14 | Seitenaufbau | ⬜ |
 | 15 | CSS | ⬜ |
 
-Direkt danach: **Grundregeln für Ordnerstruktur und Dateinamen**. Am Ende: **Täglicher Arbeitsablauf** und **HTML-Spickzettel** zum Nachschlagen.
+Direkt danach: **Grundregeln für Ordnerstruktur und Dateinamen**. Am Ende: **Täglicher Arbeitsablauf** (inkl. Pull Requests und Git-Wörterbuch) und **HTML-Spickzettel** zum Nachschlagen.
 
 ---
 
@@ -265,7 +265,7 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 
 **Woran ich erkenne, dass es geklappt hat:** Im Explorer erscheint `anleitung.md`. Auf github.com ist sie in `main` sichtbar und wird dort schön formatiert angezeigt. In vscode.dev: Rechtsklick auf `anleitung.md` → **Vorschau öffnen**.
 
-**Merke:** Immer wenn Claude etwas für mich ändert, kommt es auf diesem Weg zu mir: Pull Request → Merge → Editor aktualisieren.
+**Merke:** Immer wenn Claude etwas für mich ändert, kommt es auf diesem Weg zu mir: Pull Request → Merge → Editor aktualisieren. Ausführlich mit allen Varianten: **Täglicher Arbeitsablauf → Änderungen von Claude übernehmen**.
 
 ## Schritt 11: Übung 1b – Absatz und Link ⏳
 
@@ -330,6 +330,51 @@ Neue Übung `uebungen/04-seitenaufbau/`.
 | Hochladen | Commit, dann Synchronisieren | Commit und Push (ein Schritt) |
 | Vorschau | Live Server | Meine Webseite neu laden |
 | Terminal | ✅ | ❌ |
+
+### Änderungen von Claude übernehmen (Pull Request)
+
+Claude speichert seine Änderungen nie direkt auf `main`, sondern auf seinem eigenen Zweig `claude/html-basics-vscodium-zio2y2`. Erst wenn ich sie per **Pull Request** übernehme („mergen“), sind sie auf `main` – in meinem Editor und auf meiner Webseite. So behalte ich die Kontrolle: Ich sehe vorher, was sich ändert.
+
+**Woran ich erkenne, dass etwas wartet:** Claude sagt es mir im Chat – oder auf github.com erscheint ein gelbes Feld „claude/… had recent pushes“.
+
+**Variante A – gelbes Feld ist da (schneller):**
+1. github.com → **Annahof** → im gelben Feld **Compare & pull request**.
+2. Prüfen: **base: `main`** ← **compare: `claude/html-basics-vscodium-zio2y2`**.
+3. **Create pull request**.
+4. Weiter bei „Übernehmen“.
+
+**Variante B – kein gelbes Feld** (es verschwindet nach ca. einer Stunde):
+1. github.com → **Annahof** → Reiter **Pull requests** → **New pull request**.
+2. Einstellen: **base: `main`** ← **compare: `claude/html-basics-vscodium-zio2y2`**.
+3. **Create pull request** → nochmals **Create pull request**.
+4. Weiter bei „Übernehmen“.
+
+**Variante C – Claude hat den Pull Request schon angelegt:**
+1. github.com → **Annahof** → Reiter **Pull requests** → den offenen Pull Request antippen.
+2. Weiter bei „Übernehmen“.
+
+**Übernehmen:**
+1. Optional: Reiter **Files changed** → ansehen, was sich ändert (grün = neu, rot = entfernt).
+2. Unten **„No conflicts with base branch“**? → **Merge pull request** → **Confirm merge**.
+3. Oben steht lila **„Merged“** → fertig. „Delete branch“ nicht nötig.
+4. **vscode.dev neu laden** (oder 🔄 unten links neben `main`).
+
+> ⚠️ **Steht dort „This branch has conflicts“?** Dann haben Claude und ich dieselbe Stelle geändert. Nicht selbst lösen – Claude Bescheid geben, Claude führt die Änderungen zusammen.
+
+> 💡 **Tipp:** Bevor ich Claude um eine Änderung bitte, meine eigenen Änderungen committen. Dann gibt es kaum Konflikte.
+
+### Git-Wörterbuch
+
+| Begriff | Bedeutung |
+|---|---|
+| **Repository (Repo)** | Projektordner auf GitHub mit allen Dateien und ihrer Geschichte |
+| **Commit** | Ein gespeicherter Zwischenstand mit Nachricht („Hobbyliste ergänzt“) |
+| **Push** | Commits vom Editor zu GitHub hochladen |
+| **Synchronisieren / Pull** | Neueste Änderungen von GitHub in den Editor holen |
+| **Branch (Zweig)** | Eigener Arbeitsstand; mein Hauptzweig ist `main` |
+| **Pull Request (PR)** | Anfrage: „Übernimm die Änderungen von Zweig X nach `main`“ |
+| **Merge** | Das Übernehmen selbst – die Änderungen landen auf `main` |
+| **Konflikt** | Beide Zweige haben dieselbe Stelle unterschiedlich geändert |
 
 ### Nützliche Tricks
 - `!` + **Tab** in leerer HTML-Datei → komplettes Grundgerüst
