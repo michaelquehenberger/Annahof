@@ -4,6 +4,8 @@
 https://michaelquehenberger.github.io/Annahof/
 https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-de
 
+📖 **Schritt-für-Schritt-Anleitung:** [anleitung.md](anleitung.md)
+
 ## Ordnerstruktur
 
 ```
