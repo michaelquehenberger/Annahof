@@ -8,58 +8,71 @@ Begonnen am 10. Okt. 2026 · @Michael
 - Editor (iPad/Browser): https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-de
 - Repository: https://github.com/michaelquehenberger/Annahof
 
-**Inhalt**
+**So ist dieses Protokoll aufgebaut:** Die Schritte stehen in der Reihenfolge, in der ich arbeite. Jeder Schritt hat einen Status, eine Anleitung und eine Erfolgskontrolle („Woran ich erkenne, dass es geklappt hat“). Erledigtes hake ich ab: `- [ ]` → `- [x]`.
 
-- Teil A – Lernprotokoll (was ich gemacht habe, der Reihe nach)
-- Teil B – So arbeite ich (jedes Mal)
-- Teil C – HTML-Spickzettel
-- Teil D – Fortschritt und nächste Schritte
+| Nr. | Schritt | Status |
+| --- | --- | --- |
+| 1 | GitHub-Repository anlegen und mit Claude verbinden | ✅ |
+| 2 | vscode.dev am iPad öffnen | ✅ |
+| 3 | Aufbau von index.html verstehen | ✅ |
+| 4 | Erste Änderung und Commit und Push | ✅ |
+| 5 | Repository öffentlich machen | ✅ |
+| 6 | Branch `main` anlegen | ✅ |
+| 7 | GitHub Pages einschalten | ✅ |
+| 8 | Übung 1a: Liste mit Hobbys | ✅ |
+| 9 | Default branch auf `main` stellen | ⏳ als Nächstes |
+| 10 | Claudes Änderungen per Pull Request übernehmen | ⏳ als Nächstes |
+| 11 | Übung 1b: Absatz und Link | ⬜ |
+| 12 | Bilder | ⬜ |
+| 13 | Tabellen | ⬜ |
+| 14 | Seitenaufbau | ⬜ |
+| 15 | CSS | ⬜ |
+
+Am Ende: **Täglicher Arbeitsablauf** und **HTML-Spickzettel** zum Nachschlagen.
 
 ---
 
-# Teil A – Lernprotokoll
+## Vorab: Code-Bereich oder normaler Chat?
 
-## Überblick: Code-Bereich oder normaler Chat?
-
-Der Code-Bereich in Claude ist für Programmierarbeit an echten Projektdateien gedacht, der normale Chat (oder ein Projekt) für Erklären, Planen und Lernen. Für den Einstieg in HTML nutze ich beides: den Chat zum Verstehen, den Code-Bereich, wenn Claude Dateien in meinem GitHub-Repository lesen, anlegen oder prüfen soll.
+Der Code-Bereich in Claude ist für Programmierarbeit an echten Projektdateien gedacht, der normale Chat (oder ein Projekt) für Erklären, Planen und Lernen.
 
 |  | Normaler Chat / Projekt | Code-Bereich |
 | --- | --- | --- |
-| Wofür | Erklären, Unterrichtsplanung, Fragen zu Fehlern, Skriptum/Buch als PDF hinterlegen | Dateien lesen, anlegen und ändern, Code prüfen, committen |
+| Wofür | Erklären, Unterrichtsplanung, Fragen, Skriptum/Buch als PDF hinterlegen | Dateien lesen, anlegen und ändern, Code prüfen, committen |
 | Braucht ein Repository | Nein | Ja (sonst: „Ein Repository muss ausgewählt werden“) |
 | Beispiel | „Erkläre mir `<ul>` und `<li>`“ | „Lege eine Übungsseite im Ordner `uebungen` an“ |
 
-**Tipp zum Lernen:** Dazuschreiben, wie Claude arbeiten soll, zum Beispiel: „Ich möchte HTML selbst lernen. Erkläre Schritt für Schritt und gib mir kleine Übungen.“
+**Tipp:** Dazuschreiben, wie Claude arbeiten soll, z. B. „Ich möchte HTML selbst lernen. Erkläre Schritt für Schritt und gib mir kleine Übungen.“
 
-**Diese Dokumentation** liegt direkt im Repository (`anleitung.md`). So ist sie neben dem Code, auf GitHub lesbar und Claude kann sie im Code-Bereich lesen und ergänzen.
+Dieses Protokoll liegt im Repository (`anleitung.md`) – Claude kann es im Code-Bereich lesen und ergänzen.
 
-## Schritt 1: GitHub-Repository anlegen und mit Claude verbinden
+---
+
+## Schritt 1: GitHub-Repository anlegen und mit Claude verbinden ✅
 
 GitHub ist ein Online-Speicher für Code-Projekte. Ein Repository ist darin ein Projektordner. Mein Repository heißt **Annahof**.
 
-1. Auf github.com ein kostenloses Konto anlegen (das muss ich selbst tun).
-2. Oben rechts auf „+“ tippen, dann „New repository“. Name vergeben, Haken bei „Add a README“ setzen.
-3. In Claude im Code-Bereich auf „Repository hinzufügen“ tippen und GitHub mit Claude verknüpfen. Die Freigabe auf der GitHub-Seite bestätigen.
-4. Das Repository auswählen. Danach kann die Sitzung starten.
+- [x] Auf github.com ein kostenloses Konto anlegen (das muss ich selbst tun).
+- [x] Oben rechts auf „+“ → „New repository“. Name vergeben, Haken bei „Add a README“ setzen.
+- [x] In Claude im Code-Bereich auf „Repository hinzufügen“ tippen und GitHub mit Claude verknüpfen. Freigabe auf der GitHub-Seite bestätigen.
+- [x] Das Repository auswählen, Sitzung starten.
 
-**Woran ich erkenne, dass es geklappt hat:** Im Titel der Sitzung steht der Repository-Name („Annahof“), und es läuft eine Meldung „Sitzung initialisiert“.
+**Woran ich erkenne, dass es geklappt hat:** Im Titel der Sitzung steht „Annahof“, und es läuft „Sitzung initialisiert“. Claude hat die Startstruktur angelegt: `index.html`, `uebungen/01-erste-seite/index.html`, `bilder/`, `README.md`.
 
-Claude hat dann die Startstruktur angelegt: `index.html`, `uebungen/01-erste-seite/index.html`, `bilder/`, `README.md`.
+## Schritt 2: vscode.dev am iPad öffnen ✅
 
-## Schritt 2: vscode.dev am iPad, Repository öffnen, Branch verstehen
+VSCodium gibt es nicht als iPad-App. Am iPad nutze ich VS Code im Browser (Safari) – im Kern derselbe Editor. Am Schulrechner arbeite ich mit VSCodium.
 
-VSCodium und VS Code gibt es nicht als iPad-App. Am iPad nutze ich VS Code im Browser (Safari). Am Schulrechner arbeite ich mit VSCodium – beides ist im Kern derselbe Editor.
+- [x] In Safari den **Editor-Link** (oben) öffnen. Alternativ: im Repository auf github.com die Taste `.` drücken.
+- [x] Oder über vscode.dev: Explorer → **„Open Remote Repository“** → **„Open Repository from GitHub“** → Zugriff erlauben → **Annahof**.
 
-1. In Safari **vscode.dev** öffnen (alternativ im Repository auf github.com die Taste `.` drücken oder `github.com` durch `github.dev` ersetzen). Am schnellsten: den Editor-Link oben verwenden.
-2. Links im Explorer auf **„Open Remote Repository“** tippen.
-3. **„Open Repository from GitHub“** wählen, GitHub-Zugriff erlauben und das Repository **Annahof** auswählen.
-4. Im Explorer erscheinen `bilder`, `uebungen`, `index.html` und `README.md`.
+**Woran ich erkenne, dass es geklappt hat:** Links im Explorer stehen `bilder`, `uebungen`, `index.html`, `README.md`.
 
-**Branch:** Ein Branch (Zweig) ist ein eigener Arbeitsstand. Welcher gerade aktiv ist, steht **unten links in der Statusleiste**. Am Anfang stand dort `claude/html-basics-vscodium-zio2y2` – der Zweig, auf dem die Claude-Sitzung ihre Dateien abgelegt hat. Mein Hauptzweig ist jetzt **`main`** (siehe Schritt 6). Arbeit von einem anderen Zweig übernimmt man auf GitHub über einen **Pull Request**.
+**Was ein Branch ist:** Ein Branch (Zweig) ist ein eigener Arbeitsstand. Welcher aktiv ist, steht **unten links in der Statusleiste**. Mein Hauptzweig ist `main` (Schritt 6). Claude arbeitet auf einem eigenen Zweig (`claude/html-basics-vscodium-zio2y2`); seine Änderungen übernehme ich per Pull Request (Schritt 10).
 
-**Einschränkung:** Im Browser-Editor gibt es kein Live Server und kein Terminal. Die Vorschau am iPad läuft über GitHub Pages (Schritt 5).
+**Einschränkung:** Im Browser-Editor gibt es kein Live Server und kein Terminal. Die Vorschau läuft über GitHub Pages (Schritt 7).
 
-## Schritt 3: Aufbau von index.html Zeile für Zeile
+## Schritt 3: Aufbau von index.html verstehen ✅
 
 Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Körper (`body`, alles Sichtbare). Fast jeder Tag wird geöffnet (`<p>`) und wieder geschlossen (`</p>`).
 
@@ -76,54 +89,63 @@ Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Kö
 | 14-18 | `<ul>` mit `<li>` | Aufzählung, jeder Punkt in einem `<li>` |
 | 20 | `<a href="...">` | Link, der Pfad in `href` zeigt auf die Zieldatei |
 
-**Besonderheit:** In den Zeilen 15-17 stehen `&lt;` und `&gt;`. Das sind Ersatzzeichen für `<` und `>`, damit der Browser sie als Text anzeigt und nicht als Tag.
+**Besonderheit:** `&lt;` und `&gt;` sind Ersatzzeichen für `<` und `>`, damit der Browser sie als Text anzeigt und nicht als Tag.
 
-## Schritt 4: Mini-Übung 1 und Änderungen speichern
+## Schritt 4: Erste Änderung und Commit und Push ✅
 
-**Übung (5 Minuten):**
+**Mini-Übung:**
 
-- [x] In `index.html` Zeile 10 den Text der Überschrift ändern (zum Beispiel `Hallo MQ Welt!`).
-- [ ] Nach Zeile 11 einen neuen Absatz einfügen: `<p>Ich lerne gerade HTML.</p>`
+- [x] In `index.html` den Text der Überschrift ändern (`Hallo MQ Welt!`).
+- [ ] Nach dem ersten Absatz einen neuen einfügen: `<p>Ich lerne gerade HTML.</p>`
 - [ ] In der Liste einen vierten Punkt ergänzen: `<li>Links mit <code>&lt;a&gt;</code></li>`
 - [ ] Denkaufgabe: Was passiert, wenn bei einem `<li>` das `</li>` fehlt? Fehleranzeige unten (Zahlen neben dem Warndreieck) beobachten.
 
-**Änderungen speichern (Commit und Push):**
+**Änderungen speichern = Commit und Push:**
 
 1. Links auf das Symbol **Quellcodeverwaltung** (Verzweigungs-Symbol) tippen. Geänderte Dateien stehen unter „Änderungen“, markiert mit **M**.
-2. In das Feld **„Nachricht“** eine kurze Notiz tippen, zum Beispiel `Überschrift geändert`. Ohne Nachricht erscheint der rote Hinweis „Sie müssen vor dem Committen eine Commitnachricht angeben“.
-3. Auf den blauen Button **„Commit und Push“** tippen. Falls eine Rückfrage erscheint, bestätigen.
-4. Erfolg: Unter „Änderungen“ steht nichts mehr.
+2. In das Feld **„Nachricht“** eine kurze Notiz tippen, z. B. `Überschrift geändert`. Ohne Nachricht erscheint „Sie müssen vor dem Committen eine Commitnachricht angeben“.
+3. Auf den blauen Button **„Commit und Push“** tippen. Rückfrage ggf. bestätigen.
 
-## Schritt 5: Vorschau am iPad mit GitHub Pages
+**Woran ich erkenne, dass es geklappt hat:** Unter „Änderungen“ steht nichts mehr.
 
-**Status:** erledigt ✅. GitHub Pages ist bei kostenlosen GitHub-Konten nur für **öffentliche** Repositories verfügbar – deshalb ist „Annahof“ jetzt öffentlich.
+## Schritt 5: Repository öffentlich machen ✅
 
-1. Auf github.com das Repository **Annahof** öffnen, dann **Settings**.
-2. Unter **General** ganz unten bei **Danger Zone** auf „Change visibility“ tippen und **Public** wählen.
-3. In den Settings links auf **Pages** gehen.
-4. Bei „Source“ **Deploy from a branch** wählen. Als Branch **`main`** und den Ordner **`/ (root)`** wählen, dann **Save**.
-5. Nach etwa einer Minute ist die Seite unter `https://michaelquehenberger.github.io/Annahof/` erreichbar. Nach jedem Commit dauert es kurz, bis die Änderung sichtbar ist (ggf. zweimal neu laden).
+GitHub Pages (die Vorschau am iPad) gibt es bei kostenlosen Konten nur für **öffentliche** Repositories.
 
-> ⚠️ **Nicht anklicken:** „Upgrade“, „Start free for 30 days“, „GitHub Enterprise“ und „Configure“ bei Jekyll/Static HTML – alles unnötig bzw. kostenpflichtig. Steht bei Source plötzlich „GitHub Actions“, zurück auf **Deploy from a branch** stellen.
+- [x] github.com → Repository **Annahof** → **Settings**.
+- [x] **General** ganz nach unten → **Danger Zone** → **Change visibility** → **Public** → bestätigen.
 
-**Wichtig:** Ein öffentliches Repository ist für alle sichtbar. Keine Schülerdaten und nichts Privates ablegen.
+**Woran ich erkenne, dass es geklappt hat:** Neben dem Repository-Namen steht nicht mehr „Private“.
 
-**Alternative (Repository bleibt privat):** Als Lehrer über https://education.github.com/teachers GitHub Pro gratis beantragen – dann geht Pages auch privat. Sonst: keine Browser-Vorschau am iPad; in der Schule zeigt VSCodium mit Live Server die Vorschau.
+**Wichtig:** Öffentlich heißt, jeder kann den Code lesen (nur ich kann ihn ändern). Keine Schülerdaten und nichts Privates ablegen.
 
-## Schritt 6: Hauptzweig `main` einrichten
+**Alternative (privat bleiben):** Als Lehrer über https://education.github.com/teachers GitHub Pro gratis beantragen – dann geht Pages auch privat (Prüfung dauert ein paar Tage).
 
-**Status:** teilweise erledigt.
+## Schritt 6: Branch `main` anlegen ✅
 
-1. [x] In vscode.dev unten links auf den Branch-Namen tippen → **„+ Neuen Branch erstellen…“** → `main` eingeben → Enter. Unten links steht jetzt `main`.
-2. [ ] Auf GitHub: **Settings → General → Default branch** → Pfeil-Symbol → `main` → **Update**.
-   Warum wichtig: Solange der Default noch der `claude/…`-Zweig ist, landen Änderungen, die ich direkt auf github.com mache, dort statt auf `main` – und erscheinen nicht auf meiner Webseite.
-3. [ ] Den `claude/…`-Zweig per Pull Request in `main` übernehmen (Claude kann den Pull Request anlegen, ich bestätige mit **Merge**).
+- [x] In vscode.dev unten links auf den Branch-Namen tippen.
+- [x] **„+ Neuen Branch erstellen…“** → `main` eingeben → Enter.
 
-**Ab jetzt:** Vor dem Arbeiten unten links prüfen, dass `main` steht.
+**Woran ich erkenne, dass es geklappt hat:** Unten links steht `main`. Auf GitHub steht „2 Branches“.
 
-## Schritt 7: Übung 1 – Liste mit Hobbys
+## Schritt 7: GitHub Pages einschalten ✅
 
-Datei: `uebungen/01-erste-seite/index.html` (im Explorer: `uebungen` → `01-erste-seite` → `index.html`). Beide Dateien heißen `index.html` – welche offen ist, zeigt die Pfadzeile über dem Code.
+- [x] **Settings** → links **Pages**.
+- [x] Source: **Deploy from a branch**.
+- [x] Branch: **`main`**, Ordner: **`/ (root)`** → **Save**.
+
+**Woran ich erkenne, dass es geklappt hat:** Oben steht „GitHub Pages source saved“ bzw. „Your site is live at …“. Nach 1–2 Minuten ist die Seite unter https://michaelquehenberger.github.io/Annahof/ erreichbar.
+
+> ⚠️ **Nicht anklicken:** „Upgrade“, „Start free for 30 days“, „GitHub Enterprise“, „Configure“ bei Jekyll/Static HTML – unnötig bzw. kostenpflichtig. Steht bei Source plötzlich „GitHub Actions“: zurück auf **Deploy from a branch**.
+
+## Schritt 8: Übung 1a – Liste mit Hobbys ✅
+
+Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-erste-seite` → `index.html`. (Beide Dateien heißen `index.html`; welche offen ist, zeigt die Pfadzeile über dem Code.)
+
+- [x] Unter den Kommentar eine Überschrift schreiben: `<h2>Meine Hobbys</h2>`
+- [x] Darunter die Liste: `<ul>` als Rahmen, jedes Hobby in einem `<li>`
+- [x] Ein Hobby mit `<strong>` fett machen
+- [x] Commit und Push, Webseite neu laden, über „ersten Übung“ ansehen
 
 ```html
 <h2>Meine Hobbys</h2>
@@ -134,20 +156,89 @@ Datei: `uebungen/01-erste-seite/index.html` (im Explorer: `uebungen` → `01-ers
 </ul>
 ```
 
-- `<ul>` = Rahmen der Liste, jedes `<li>` = ein Punkt.
-- `<strong>` steht **innerhalb** des `<li>` – richtig verschachtelt.
-- Feedback: Rechtschreibung laut Duden „Hobby**s**“; Einrückung mit Rechtsklick → **Dokument formatieren** korrigieren.
+**Feedback:** Struktur korrekt, `<strong>` richtig innerhalb von `<li>` verschachtelt. Kleinigkeiten: laut Duden „Hobby**s**“; Einrückung mit Rechtsklick → **Dokument formatieren** korrigieren.
+
+**Ausprobieren:** `<ul>` gegen `<ol>` tauschen → nummerierte Liste.
+
+## Schritt 9: Default branch auf `main` stellen ⏳
+
+**Warum:** Solange der Default noch der `claude/…`-Zweig ist, landen Änderungen, die ich direkt auf github.com mache, dort – und nicht auf `main` und meiner Webseite.
+
+- [ ] github.com → Repository **Annahof** → **Settings** (Zahnrad oben).
+- [ ] Links ist **General** schon ausgewählt. Abschnitt **Default branch** suchen (weit oben).
+- [ ] Rechts daneben auf das **Pfeil-Symbol ⇄** („Switch to another branch“) tippen.
+- [ ] Im Menü **`main`** auswählen → **Update**.
+- [ ] Warnhinweis („I understand, update the default branch“) bestätigen.
+
+**Woran ich erkenne, dass es geklappt hat:** Unter „Default branch“ steht `main`. Auf der Code-Seite des Repos ist oben links `main` ausgewählt.
+
+## Schritt 10: Claudes Änderungen per Pull Request übernehmen ⏳
+
+**Warum:** Claude legt Dateien (wie dieses Protokoll) auf seinem eigenen Zweig `claude/html-basics-vscodium-zio2y2` ab. Erst nach dem Übernehmen („Merge“) sind sie auf `main` – und damit in meinem Editor und auf meiner Webseite.
+
+**Pull Request anlegen** (entfällt, wenn Claude ihn schon angelegt hat → weiter bei „Übernehmen“):
+
+- [ ] github.com → Repository **Annahof** → Reiter **Pull requests** → grüner Button **New pull request**.
+- [ ] Oben zwei Auswahlfelder einstellen: **base: `main`** ← **compare: `claude/html-basics-vscodium-zio2y2`**.
+- [ ] Darunter erscheinen die Änderungen (grün = neu, rot = entfernt). Kurz durchsehen.
+- [ ] **Create pull request** → Titel lassen oder z. B. „Lernprotokoll übernehmen“ → nochmals **Create pull request**.
+
+**Übernehmen:**
+
+- [ ] Im Pull Request nach unten scrollen → grüner Button **Merge pull request** → **Confirm merge**.
+- [ ] Danach erscheint „Pull request successfully merged and closed“. Den Button „Delete branch“ brauche ich nicht zu tippen.
+
+**Im Editor aktualisieren:**
+
+- [ ] vscode.dev neu laden (oder unten links neben `main` auf das Kreis-Pfeil-Symbol 🔄 tippen).
+
+**Woran ich erkenne, dass es geklappt hat:** Im Explorer erscheint `anleitung.md`. Auf github.com ist sie in `main` sichtbar und wird dort schön formatiert angezeigt. In vscode.dev: Rechtsklick auf `anleitung.md` → **Vorschau öffnen**.
+
+**Merke:** Immer wenn Claude etwas für mich ändert, kommt es auf diesem Weg zu mir: Pull Request → Merge → Editor aktualisieren.
+
+## Schritt 11: Übung 1b – Absatz und Link ⬜
+
+Datei: `uebungen/01-erste-seite/index.html`
+
+- [ ] Direkt unter `<h1>` einen Absatz über mich schreiben: `<p>Ich heiße … und …</p>`
+- [ ] Einen Link zu meiner Lieblingsseite einfügen:
+  ```html
+  <p>Meine Lieblingsseite: <a href="https://www.orf.at">ORF</a></p>
+  ```
+  In `href="…"` steht die Adresse, zwischen `<a …>` und `</a>` der anklickbare Text.
+- [ ] Commit und Push, Webseite neu laden, Link antippen.
+
+**Woran ich erkenne, dass es geklappt hat:** Der Link ist blau unterstrichen und öffnet die Seite.
+
+## Schritt 12: Bilder ⬜
+
+- [ ] Ein Bild in den Ordner `bilder/` hochladen.
+- [ ] Einbinden mit `<img src="../../bilder/foto.jpg" alt="Beschreibung">` (`alt` = Text für Screenreader bzw. wenn das Bild fehlt).
+
+## Schritt 13: Tabellen ⬜
+
+- [ ] `<table>`, `<tr>` (Zeile), `<th>` (Kopfzelle), `<td>` (Zelle)
+
+## Schritt 14: Seitenaufbau ⬜
+
+- [ ] `<header>`, `<nav>`, `<main>`, `<footer>`
+
+## Schritt 15: CSS ⬜
+
+- [ ] Eigene Datei `style.css` anlegen.
+- [ ] Im `<head>` einbinden: `<link rel="stylesheet" href="style.css">`
+- [ ] Farben, Schrift, Layout gestalten.
 
 ---
 
-# Teil B – So arbeite ich (jedes Mal)
+# Täglicher Arbeitsablauf
 
 ### Am iPad – vscode.dev
 1. Editor-Link öffnen.
-2. **Unten links prüfen: steht dort `main`?** Wenn nicht → antippen und `main` wählen.
+2. **Unten links prüfen: steht `main`?** Wenn nicht → antippen und `main` wählen.
 3. Datei im **Explorer** öffnen und bearbeiten.
 4. Quellcodeverwaltung → Nachricht → **Commit und Push**.
-5. Ca. 1 Minute warten → Tab mit meiner Webseite **neu laden**.
+5. Ca. 1 Minute warten → Tab mit meiner Webseite **neu laden** (ggf. zweimal).
 
 > ⚠️ Änderungen in vscode.dev liegen nur im Browser, bis ich committe. Am Ende jeder Arbeitsphase **immer committen**!
 
@@ -172,7 +263,7 @@ Datei: `uebungen/01-erste-seite/index.html` (im Explorer: `uebungen` → `01-ers
 
 ---
 
-# Teil C – HTML-Spickzettel
+# HTML-Spickzettel
 
 ### Grundgerüst – jede Seite
 ```html
@@ -196,7 +287,7 @@ Datei: `uebungen/01-erste-seite/index.html` (im Explorer: `uebungen` → `01-ers
 | `<h1>`–`<h6>` | Überschriften (1 = größte) | `<h1>Über mich</h1>` |
 | `<p>` | Absatz | `<p>Ich heiße …</p>` |
 | `<!-- -->` | Kommentar (unsichtbar) | `<!-- Notiz -->` |
-| `<ul>` | Aufzählung mit Punkten | siehe Schritt 7 |
+| `<ul>` | Aufzählung mit Punkten | siehe Schritt 8 |
 | `<ol>` | nummerierte Liste | wie `<ul>`, nur mit Zahlen |
 | `<li>` | ein Listenpunkt | `<li>Kochen</li>` |
 | `<strong>` | fett / wichtig | `<strong>Sport</strong>` |
@@ -216,25 +307,8 @@ Datei: `uebungen/01-erste-seite/index.html` (im Explorer: `uebungen` → `01-ers
 
 ---
 
-# Teil D – Fortschritt und nächste Schritte
-
-### Übung 1 – Über mich (`uebungen/01-erste-seite/index.html`)
-- [x] Überschrift `<h2>` für die Hobbys
-- [x] Liste mit Hobbys (`<ul>`, `<li>`)
-- [x] Ein Hobby fett mit `<strong>`
-- [ ] Absatz über mich (`<p>`)
-- [ ] Link zu meiner Lieblingsseite (`<a href="…">`)
-
-### Als Nächstes
-- [ ] Bilder einbinden: `<img src="../../bilder/foto.jpg" alt="Beschreibung">`
-- [ ] Tabellen: `<table>`, `<tr>`, `<td>`, `<th>`
-- [ ] Seitenaufbau: `<header>`, `<nav>`, `<main>`, `<footer>`
-- [ ] Danach **CSS**: eigene Datei `style.css`, eingebunden mit `<link rel="stylesheet" href="style.css">` – Farben, Schrift, Layout
-
----
-
 ## Notizen
 
-*(Platz für eigene Notizen, Fragen, Aha-Momente – Kästchen abhaken: `- [ ]` → `- [x]`)*
+*(Platz für eigene Notizen, Fragen, Aha-Momente)*
 
 -
