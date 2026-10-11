@@ -2,6 +2,7 @@
 
 Übungsprojekt für HTML (später CSS), bearbeitet mit VSCodium.
 https://michaelquehenberger.github.io/Annahof/
+https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-de
 
 ## Ordnerstruktur
 
