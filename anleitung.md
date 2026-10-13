@@ -337,6 +337,7 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 - [ ] Ein **eigenes Foto** wählen (oder ein freies Bild von z. B. pixabay.com / unsplash.com).
 - [ ] **Dateiname** nach unseren Regeln: klein, ohne Leerzeichen und Umlaute, z. B. `skifahren.jpg`.
 - [ ] **Größe:** höchstens ca. 1500 px breit und unter 500 KB. Handyfotos sind oft 4–8 MB – vorher verkleinern (iPad: Foto teilen → „Optionen“ / Kurzbefehl; PC: z. B. squoosh.app im Browser).
+- [ ] **Standort entfernen:** Handyfotos speichern unsichtbar den **GPS-Aufnahmeort**, Datum und Gerät (EXIF-Daten). Vor dem Veröffentlichen entfernen – iPad: Foto in der Fotos-App → **Teilen → Optionen → „Standort“ ausschalten**; squoosh.app entfernt EXIF-Daten beim Verkleinern automatisch.
 
 **Teil 3: Bild hochladen** in den Ordner `uebungen/02-bilder/bilder/`
 - *iPad (github.com):*
@@ -346,11 +347,13 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
   4. vscode.dev neu laden – das Bild erscheint im Explorer.
 - *Laptop (VSCodium):* Ordner `bilder` in `uebungen\02-bilder` anlegen, Bild im Windows-Explorer hineinkopieren → erscheint automatisch in VSCodium → Commit → Sync Changes.
 
+**Feedback (13. Okt.):** Beim ersten Versuch landete das Foto im Hauptordner `bilder/` statt in `uebungen/02-bilder/bilder/`, statt des Ordners entstand eine Datei `Bilder` (der `/` fehlte), und das Foto war 7,5 MB groß, hieß `IMG_4973.jpeg` und enthielt GPS-Koordinaten. Claude hat aufgeräumt: Foto verkleinert (1125 × 1500 px, 360 KB), EXIF/GPS entfernt, als `uebungen/02-bilder/bilder/waldweg.jpg` abgelegt, falsche Dateien gelöscht. Weiter mit Teil 4.
+
 **Teil 4: Bild einbinden**
 ```html
 <h2>Mein Lieblingsort</h2>
-<img src="bilder/skifahren.jpg" alt="Skipiste mit Bergpanorama im Winter" width="600">
-<p>Hier fahre ich am liebsten Ski.</p>
+<img src="bilder/waldweg.jpg" alt="Asphaltierter Weg zwischen hohen Bäumen bei Sonnenschein" width="600">
+<p>Hier gehe ich gerne spazieren.</p>
 ```
 
 | Teil | Bedeutung |
@@ -378,7 +381,8 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 > - **Zeitbedarf:** ca. 30 Minuten (inkl. Bild suchen und verkleinern).
 > - **Typische Fehler:** Pfad falsch (`bilder/` vergessen oder Ordner falsch benannt); Dateiname mit Großbuchstaben/Leerzeichen (`Foto 1.JPG`) – funktioniert lokal unter Windows, online nicht; `alt` fehlt; riesige Handyfotos (lange Ladezeit); `</img>` geschrieben.
 > - **Differenzierung:** Schnelle Schüler fügen mehrere Bilder ein, machen ein Bild zum Link (`<a href="…"><img …></a>`) oder recherchieren `<figure>` und `<figcaption>`.
-> - **Urheberrecht & Datenschutz:** Nur eigene Fotos oder Bilder mit freier Lizenz (Quelle angeben). Keine erkennbaren Personen ohne Einwilligung – bei Schülern unter 14 Einwilligung der Eltern.
+> - **In der Praxis beobachtet:** Upload in den falschen Ordner; Datei `Bilder` statt Ordner `bilder/`; Original-Handyfoto mit 7,5 MB und GPS-Daten. → Vorher gemeinsam einen Ordner anlegen und *ein* vorbereitetes Bild austeilen.
+> - **Urheberrecht & Datenschutz:** Nur eigene Fotos oder Bilder mit freier Lizenz (Quelle angeben). Keine erkennbaren Personen ohne Einwilligung – bei Schülern unter 14 Einwilligung der Eltern. **GPS-Standort vor dem Hochladen entfernen** – ein Foto von zu Hause verrät sonst die Wohnadresse.
 
 ## Schritt 13: Tabellen ⬜
 
