@@ -43,6 +43,7 @@ Annahof/
 ├── index.html              Startseite = Inhaltsverzeichnis aller Übungen
 ├── README.md               kurze Projektbeschreibung (für GitHub)
 ├── anleitung.md            dieses Lernprotokoll
+├── doku/                   Dokumentation, z. B. vscodium-manual.md (Manual für den Unterricht)
 ├── css/                    später: style.css (gilt für alle Seiten)
 ├── bilder/                 Bilder, die mehrere Seiten nutzen
 └── uebungen/
