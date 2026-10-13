@@ -6,6 +6,8 @@ https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-d
 
 📖 **HTML-Lernprotokoll (Schritt-für-Schritt-Anleitung):** [anleitung.md](anleitung.md)
 
+🛠️ **Manual für den Unterricht – Webseiten bauen mit VSCodium:** [doku/vscodium-manual.md](doku/vscodium-manual.md)
+
 ## Ordnerstruktur
 
 ```
