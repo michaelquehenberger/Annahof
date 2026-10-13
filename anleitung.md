@@ -24,8 +24,8 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 8 | Übung 1a: Liste mit Hobbys | ✅ |
 | 9 | Default branch auf `main` stellen | ✅ |
 | 10 | Claudes Änderungen per Pull Request übernehmen | ✅ |
-| 11 | Übung 1b: Absatz und Link | ⏳ als Nächstes |
-| 12 | Bilder | ⬜ |
+| 11 | Übung 1b: Absatz und Link | ✅ |
+| 12 | Übung 2: Bilder | ⏳ als Nächstes |
 | 13 | Tabellen | ⬜ |
 | 14 | Seitenaufbau | ⬜ |
 | 15 | CSS | ⬜ |
@@ -276,7 +276,7 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 
 **Merke:** Immer wenn Claude etwas für mich ändert, kommt es auf diesem Weg zu mir: Pull Request → Merge → Editor aktualisieren. Ausführlich mit allen Varianten: **Täglicher Arbeitsablauf → Änderungen von Claude übernehmen**.
 
-## Schritt 11: Übung 1b – Absatz und Link ⏳
+## Schritt 11: Übung 1b – Absatz und Link ✅
 
 Datei: `uebungen/01-erste-seite/index.html`
 
@@ -285,14 +285,14 @@ Datei: `uebungen/01-erste-seite/index.html`
 - *iPad (vscode.dev):* neu laden → unten links `main` prüfen → Datei öffnen.
 
 **Teil 1: Absatz über mich**
-- [ ] Direkt unter `<h1>Übung 1: Über mich</h1>` einen Absatz einfügen:
+- [x] Direkt unter `<h1>Übung 1: Über mich</h1>` einen Absatz einfügen:
   ```html
   <p>Ich heiße … und …</p>
   ```
-- [ ] Bonus: ein Wort mit `<strong>` hervorheben.
+- [x] Bonus: ein Wort mit `<strong>` hervorheben.
 
 **Teil 2: Link zu meiner Lieblingsseite**
-- [ ] Unter `</ul>` einfügen (Adresse und Text durch eigene Lieblingsseite ersetzen):
+- [x] Unter `</ul>` einfügen (Adresse und Text durch eigene Lieblingsseite ersetzen):
   ```html
   <h2>Meine Lieblingsseite</h2>
   <p>Ich lese gern auf <a href="https://www.orf.at" target="_blank">ORF.at</a>.</p>
@@ -307,27 +307,82 @@ Datei: `uebungen/01-erste-seite/index.html`
   | `target="_blank"` | optional: öffnet den Link in einem neuen Tab |
 
 **Teil 3: Aufräumen**
-- [ ] „Hobbies“ → **„Hobbys“**
-- [ ] Code formatieren: VSCodium **Shift + Alt + F**, vscode.dev Rechtsklick → **Dokument formatieren**.
+- [x] „Hobbies“ → **„Hobbys“**
+- [x] Code formatieren: VSCodium **Shift + Alt + F**, vscode.dev Rechtsklick → **Dokument formatieren**.
 
 **Teil 4: Speichern**
-- [ ] Commit (`Absatz und Link ergänzt`) → Laptop: **Sync Changes** / iPad: **Commit und Push**.
+- [x] Commit (`Absatz und Link ergänzt`) → Laptop: **Sync Changes** / iPad: **Commit und Push**.
 
 **Woran ich erkenne, dass es geklappt hat:** Der Absatz steht unter der Überschrift, der Link ist blau unterstrichen und öffnet die Seite in einem neuen Tab.
+
+**Feedback (13. Okt.):** Absatz und Link fehlerfrei – `https://`, Anführungszeichen, `target="_blank"`, `</a>` und die Verschachtelung `<p><a>…</a></p>` stimmen. Verbesserungen (von Claude übernommen): Reihenfolge *Über mich → Hobbys → Lieblingsseite*, „Hobbys“ statt „Hobbies“, überflüssiges Leerzeichen vor `</li>` entfernt, Einrückung vereinheitlicht.
 
 > 🎓 **Für den Unterricht**
 > - **Lernziel:** Schüler schreiben einen Absatz mit `<p>` und setzen einen externen Link mit `<a href>`.
 > - **Zeitbedarf:** ca. 20 Minuten.
-> - **Typische Fehler:** `https://` fehlt (Link führt ins Leere bzw. auf eine eigene, nicht vorhandene Datei); Anführungszeichen um die Adresse vergessen; `</a>` fehlt – dann wird der ganze Rest der Seite zum Link; `<a>` steht außerhalb von `<p>`.
+> - **Typische Fehler:** `https://` fehlt (Link führt ins Leere bzw. auf eine eigene, nicht vorhandene Datei); Anführungszeichen um die Adresse vergessen; `</a>` fehlt – dann wird der ganze Rest der Seite zum Link; `<a>` steht außerhalb von `<p>`; neuer Inhalt landet an der falschen Stelle (z. B. Link vor statt nach der Liste) – vorher genau zeigen, *nach welcher Zeile* eingefügt wird; uneinheitliche Einrückung – „Dokument formatieren“ als Gewohnheit einüben.
 > - **Differenzierung:** Schnelle Schüler setzen einen zweiten Link auf eine eigene Seite (relativer Pfad, z. B. `../../index.html`) und vergleichen: Wann braucht man `https://`, wann nicht?
 > - **Datenschutz:** Im Absatz „über mich“ keine Nachnamen, Adressen oder Fotos – Fantasienamen oder nur Vornamen verwenden.
 
-## Schritt 12: Bilder ⬜
+## Schritt 12: Übung 2 – Bilder ⏳
 
-Neue Übung `uebungen/02-bilder/` anlegen (siehe „Neue Übung anlegen“ oben) und auf der Startseite verlinken.
+Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhaltsverzeichnis.
 
-- [ ] Ein Bild in den Ordner `uebungen/02-bilder/bilder/` hochladen.
-- [ ] Einbinden mit `<img src="bilder/foto.jpg" alt="Beschreibung">` (`alt` = Text für Screenreader bzw. wenn das Bild fehlt).
+**Teil 1: Neue Übung anlegen** (siehe „Neue Übung anlegen“ oben)
+- [ ] Im Ordner `uebungen` einen neuen Ordner `02-bilder` anlegen.
+- [ ] Darin eine Datei `index.html` anlegen, `!` + Tab (iPad: `!` + Enter) → Grundgerüst.
+- [ ] `lang="de"` setzen, `<title>Übung 2</title>`, im `<body>` eine `<h1>Übung 2: Bilder</h1>` und unten den Link zurück: `<p><a href="../../index.html">Zurück zur Startseite</a></p>`.
+
+**Teil 2: Bild vorbereiten**
+- [ ] Ein **eigenes Foto** wählen (oder ein freies Bild von z. B. pixabay.com / unsplash.com).
+- [ ] **Dateiname** nach unseren Regeln: klein, ohne Leerzeichen und Umlaute, z. B. `skifahren.jpg`.
+- [ ] **Größe:** höchstens ca. 1500 px breit und unter 500 KB. Handyfotos sind oft 4–8 MB – vorher verkleinern (iPad: Foto teilen → „Optionen“ / Kurzbefehl; PC: z. B. squoosh.app im Browser).
+- [ ] **Standort entfernen:** Handyfotos speichern unsichtbar den **GPS-Aufnahmeort**, Datum und Gerät (EXIF-Daten). Vor dem Veröffentlichen entfernen – iPad: Foto in der Fotos-App → **Teilen → Optionen → „Standort“ ausschalten**; squoosh.app entfernt EXIF-Daten beim Verkleinern automatisch.
+
+**Teil 3: Bild hochladen** in den Ordner `uebungen/02-bilder/bilder/`
+- *iPad (github.com):*
+  1. github.com → Annahof → `uebungen` → `02-bilder` öffnen.
+  2. Ordner `bilder` anlegen: **Add file → Create new file** → als Name `bilder/.gitkeep` eintippen (der `/` macht daraus einen Ordner) → **Commit changes**.
+  3. In den neuen Ordner `bilder` wechseln → **Add file → Upload files** → Foto auswählen → **Commit changes**.
+  4. vscode.dev neu laden – das Bild erscheint im Explorer.
+- *Laptop (VSCodium):* Ordner `bilder` in `uebungen\02-bilder` anlegen, Bild im Windows-Explorer hineinkopieren → erscheint automatisch in VSCodium → Commit → Sync Changes.
+
+**Feedback (13. Okt.):** Beim ersten Versuch landete das Foto im Hauptordner `bilder/` statt in `uebungen/02-bilder/bilder/`, statt des Ordners entstand eine Datei `Bilder` (der `/` fehlte), und das Foto war 7,5 MB groß, hieß `IMG_4973.jpeg` und enthielt GPS-Koordinaten. Claude hat aufgeräumt: Foto verkleinert (1125 × 1500 px, 360 KB), EXIF/GPS entfernt, als `uebungen/02-bilder/bilder/waldweg.jpg` abgelegt, falsche Dateien gelöscht. Weiter mit Teil 4.
+
+**Teil 4: Bild einbinden**
+```html
+<h2>Mein Lieblingsort</h2>
+<img src="bilder/waldweg.jpg" alt="Asphaltierter Weg zwischen hohen Bäumen bei Sonnenschein" width="600">
+<p>Hier gehe ich gerne spazieren.</p>
+```
+
+| Teil | Bedeutung |
+|---|---|
+| `<img>` | Bild – hat **kein** schließendes Tag |
+| `src="…"` | Pfad zur Bilddatei (relativ!) |
+| `alt="…"` | Beschreibung des Bildes – für Screenreader und falls das Bild nicht lädt. **Pflicht.** |
+| `width="600"` | optional: Breite in Pixeln (Höhe passt sich an). Später machen wir das mit CSS. |
+
+**Teil 5: Startseite als Inhaltsverzeichnis**
+- [ ] In der `index.html` im **Hauptordner** den Satz „Hier geht's zur ersten Übung“ ersetzen durch:
+  ```html
+  <h2>Meine Übungen</h2>
+  <ul>
+    <li><a href="uebungen/01-erste-seite/">Übung 1: Über mich</a></li>
+    <li><a href="uebungen/02-bilder/">Übung 2: Bilder</a></li>
+  </ul>
+  ```
+- [ ] Commit (`Übung 2: Bilder`) → Push / Sync.
+
+**Woran ich erkenne, dass es geklappt hat:** Auf der Startseite stehen beide Übungen als Liste; Übung 2 zeigt das Bild. Statt des Bildes erscheint nur der `alt`-Text oder ein kaputtes Symbol? → Pfad oder Dateiname stimmt nicht (Groß-/Kleinschreibung, Endung `.jpg` vs. `.jpeg`).
+
+> 🎓 **Für den Unterricht**
+> - **Lernziel:** Schüler binden ein Bild mit `<img src alt>` über einen relativen Pfad ein und legen eine neue Seite nach der Ordnerstruktur an.
+> - **Zeitbedarf:** ca. 30 Minuten (inkl. Bild suchen und verkleinern).
+> - **Typische Fehler:** Pfad falsch (`bilder/` vergessen oder Ordner falsch benannt); Dateiname mit Großbuchstaben/Leerzeichen (`Foto 1.JPG`) – funktioniert lokal unter Windows, online nicht; `alt` fehlt; riesige Handyfotos (lange Ladezeit); `</img>` geschrieben.
+> - **Differenzierung:** Schnelle Schüler fügen mehrere Bilder ein, machen ein Bild zum Link (`<a href="…"><img …></a>`) oder recherchieren `<figure>` und `<figcaption>`.
+> - **In der Praxis beobachtet:** Upload in den falschen Ordner; Datei `Bilder` statt Ordner `bilder/`; Original-Handyfoto mit 7,5 MB und GPS-Daten. → Vorher gemeinsam einen Ordner anlegen und *ein* vorbereitetes Bild austeilen.
+> - **Urheberrecht & Datenschutz:** Nur eigene Fotos oder Bilder mit freier Lizenz (Quelle angeben). Keine erkennbaren Personen ohne Einwilligung – bei Schülern unter 14 Einwilligung der Eltern. **GPS-Standort vor dem Hochladen entfernen** – ein Foto von zu Hause verrät sonst die Wohnadresse.
 
 ## Schritt 13: Tabellen ⬜
 
