@@ -8,6 +8,8 @@ Begonnen am 10. Okt. 2026 · @Michael
 - Editor (iPad/Browser): https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-de
 - Repository: https://github.com/michaelquehenberger/Annahof
 
+**Wozu dieses Protokoll:** Es dokumentiert meinen gesamten Lernweg in HTML und CSS – und wird damit gleichzeitig zur Vorlage, um es meinen Schülerinnen und Schülern beizubringen. Jeder Coding-Schritt hat deshalb am Ende einen Kasten **🎓 Für den Unterricht** (Lernziel, Zeitbedarf, typische Fehler, Differenzierung).
+
 **So ist dieses Protokoll aufgebaut:** Die Schritte stehen in der Reihenfolge, in der ich arbeite. Jeder Schritt hat einen Status, eine Anleitung und eine Erfolgskontrolle („Woran ich erkenne, dass es geklappt hat“). Erledigtes hake ich ab: `- [ ]` → `- [x]`.
 
 | Nr. | Schritt | Status |
@@ -232,6 +234,12 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 
 **Ausprobieren:** `<ul>` gegen `<ol>` tauschen → nummerierte Liste.
 
+> 🎓 **Für den Unterricht**
+> - **Lernziel:** Schüler erstellen eine Aufzählung mit `<ul>`/`<li>` und heben Text mit `<strong>` hervor.
+> - **Zeitbedarf:** ca. 15 Minuten.
+> - **Typische Fehler:** `<li>` außerhalb von `<ul>`; `</li>` vergessen; falsch verschachtelt (`<li><strong>…</li></strong>`); Text direkt in `<ul>` statt in `<li>`.
+> - **Differenzierung:** Schnelle Schüler wandeln die Liste in `<ol>` um oder bauen eine verschachtelte Liste (Liste in einem `<li>`).
+
 ## Schritt 9: Default branch auf `main` stellen ✅
 
 **Warum:** Solange der Default noch der `claude/…`-Zweig ist, landen Änderungen, die ich direkt auf github.com mache, dort – und nicht auf `main` und meiner Webseite.
@@ -272,15 +280,47 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 
 Datei: `uebungen/01-erste-seite/index.html`
 
-- [ ] Direkt unter `<h1>` einen Absatz über mich schreiben: `<p>Ich heiße … und …</p>`
-- [ ] Einen Link zu meiner Lieblingsseite einfügen:
-  ```html
-  <p>Meine Lieblingsseite: <a href="https://www.orf.at">ORF</a></p>
-  ```
-  In `href="…"` steht die Adresse, zwischen `<a …>` und `</a>` der anklickbare Text.
-- [ ] Commit und Push, Webseite neu laden, Link antippen.
+**Vorbereitung**
+- *Laptop (VSCodium):* Annahof-Ordner öffnen → unten links `main` prüfen → **Sync Changes** (🔄) → Datei öffnen → **Go Live**.
+- *iPad (vscode.dev):* neu laden → unten links `main` prüfen → Datei öffnen.
 
-**Woran ich erkenne, dass es geklappt hat:** Der Link ist blau unterstrichen und öffnet die Seite.
+**Teil 1: Absatz über mich**
+- [ ] Direkt unter `<h1>Übung 1: Über mich</h1>` einen Absatz einfügen:
+  ```html
+  <p>Ich heiße … und …</p>
+  ```
+- [ ] Bonus: ein Wort mit `<strong>` hervorheben.
+
+**Teil 2: Link zu meiner Lieblingsseite**
+- [ ] Unter `</ul>` einfügen (Adresse und Text durch eigene Lieblingsseite ersetzen):
+  ```html
+  <h2>Meine Lieblingsseite</h2>
+  <p>Ich lese gern auf <a href="https://www.orf.at" target="_blank">ORF.at</a>.</p>
+  ```
+- So ist ein Link aufgebaut:
+
+  | Teil | Bedeutung |
+  |---|---|
+  | `<a …>` … `</a>` | *anchor* – der Link |
+  | `href="https://…"` | Ziel-Adresse, in Anführungszeichen, extern immer mit `https://` |
+  | Text dazwischen | das, was man anklickt |
+  | `target="_blank"` | optional: öffnet den Link in einem neuen Tab |
+
+**Teil 3: Aufräumen**
+- [ ] „Hobbies“ → **„Hobbys“**
+- [ ] Code formatieren: VSCodium **Shift + Alt + F**, vscode.dev Rechtsklick → **Dokument formatieren**.
+
+**Teil 4: Speichern**
+- [ ] Commit (`Absatz und Link ergänzt`) → Laptop: **Sync Changes** / iPad: **Commit und Push**.
+
+**Woran ich erkenne, dass es geklappt hat:** Der Absatz steht unter der Überschrift, der Link ist blau unterstrichen und öffnet die Seite in einem neuen Tab.
+
+> 🎓 **Für den Unterricht**
+> - **Lernziel:** Schüler schreiben einen Absatz mit `<p>` und setzen einen externen Link mit `<a href>`.
+> - **Zeitbedarf:** ca. 20 Minuten.
+> - **Typische Fehler:** `https://` fehlt (Link führt ins Leere bzw. auf eine eigene, nicht vorhandene Datei); Anführungszeichen um die Adresse vergessen; `</a>` fehlt – dann wird der ganze Rest der Seite zum Link; `<a>` steht außerhalb von `<p>`.
+> - **Differenzierung:** Schnelle Schüler setzen einen zweiten Link auf eine eigene Seite (relativer Pfad, z. B. `../../index.html`) und vergleichen: Wann braucht man `https://`, wann nicht?
+> - **Datenschutz:** Im Absatz „über mich“ keine Nachnamen, Adressen oder Fotos – Fantasienamen oder nur Vornamen verwenden.
 
 ## Schritt 12: Bilder ⬜
 
