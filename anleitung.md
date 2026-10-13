@@ -25,8 +25,8 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 9 | Default branch auf `main` stellen | ✅ |
 | 10 | Claudes Änderungen per Pull Request übernehmen | ✅ |
 | 11 | Übung 1b: Absatz und Link | ✅ |
-| 12 | Übung 2: Bilder | ⏳ als Nächstes |
-| 13 | Tabellen | ⬜ |
+| 12 | Übung 2: Bilder | ✅ |
+| 13 | Übung 3: Tabellen | ⏳ als Nächstes |
 | 14 | Seitenaufbau | ⬜ |
 | 15 | CSS | ⬜ |
 
@@ -324,20 +324,20 @@ Datei: `uebungen/01-erste-seite/index.html`
 > - **Differenzierung:** Schnelle Schüler setzen einen zweiten Link auf eine eigene Seite (relativer Pfad, z. B. `../../index.html`) und vergleichen: Wann braucht man `https://`, wann nicht?
 > - **Datenschutz:** Im Absatz „über mich“ keine Nachnamen, Adressen oder Fotos – Fantasienamen oder nur Vornamen verwenden.
 
-## Schritt 12: Übung 2 – Bilder ⏳
+## Schritt 12: Übung 2 – Bilder ✅
 
 Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhaltsverzeichnis.
 
 **Teil 1: Neue Übung anlegen** (siehe „Neue Übung anlegen“ oben)
-- [ ] Im Ordner `uebungen` einen neuen Ordner `02-bilder` anlegen.
-- [ ] Darin eine Datei `index.html` anlegen, `!` + Tab (iPad: `!` + Enter) → Grundgerüst.
-- [ ] `lang="de"` setzen, `<title>Übung 2</title>`, im `<body>` eine `<h1>Übung 2: Bilder</h1>` und unten den Link zurück: `<p><a href="../../index.html">Zurück zur Startseite</a></p>`.
+- [x] Im Ordner `uebungen` einen neuen Ordner `02-bilder` anlegen.
+- [x] Darin eine Datei `index.html` anlegen, `!` + Tab (iPad: `!` + Enter) → Grundgerüst.
+- [x] `lang="de"` setzen, `<title>Übung 2</title>`, im `<body>` eine `<h1>Übung 2: Bilder</h1>` und unten den Link zurück: `<p><a href="../../index.html">Zurück zur Startseite</a></p>`.
 
 **Teil 2: Bild vorbereiten**
-- [ ] Ein **eigenes Foto** wählen (oder ein freies Bild von z. B. pixabay.com / unsplash.com).
-- [ ] **Dateiname** nach unseren Regeln: klein, ohne Leerzeichen und Umlaute, z. B. `skifahren.jpg`.
-- [ ] **Größe:** höchstens ca. 1500 px breit und unter 500 KB. Handyfotos sind oft 4–8 MB – vorher verkleinern (iPad: Foto teilen → „Optionen“ / Kurzbefehl; PC: z. B. squoosh.app im Browser).
-- [ ] **Standort entfernen:** Handyfotos speichern unsichtbar den **GPS-Aufnahmeort**, Datum und Gerät (EXIF-Daten). Vor dem Veröffentlichen entfernen – iPad: Foto in der Fotos-App → **Teilen → Optionen → „Standort“ ausschalten**; squoosh.app entfernt EXIF-Daten beim Verkleinern automatisch.
+- [x] Ein **eigenes Foto** wählen (oder ein freies Bild von z. B. pixabay.com / unsplash.com).
+- [x] **Dateiname** nach unseren Regeln: klein, ohne Leerzeichen und Umlaute, z. B. `skifahren.jpg`.
+- [x] **Größe:** höchstens ca. 1500 px breit und unter 500 KB. Handyfotos sind oft 4–8 MB – vorher verkleinern (iPad: Foto teilen → „Optionen“ / Kurzbefehl; PC: z. B. squoosh.app im Browser).
+- [x] **Standort entfernen:** Handyfotos speichern unsichtbar den **GPS-Aufnahmeort**, Datum und Gerät (EXIF-Daten). Vor dem Veröffentlichen entfernen – iPad: Foto in der Fotos-App → **Teilen → Optionen → „Standort“ ausschalten**; squoosh.app entfernt EXIF-Daten beim Verkleinern automatisch.
 
 **Teil 3: Bild hochladen** in den Ordner `uebungen/02-bilder/bilder/`
 - *iPad (github.com):*
@@ -364,7 +364,7 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 | `width="600"` | optional: Breite in Pixeln (Höhe passt sich an). Später machen wir das mit CSS. |
 
 **Teil 5: Startseite als Inhaltsverzeichnis**
-- [ ] In der `index.html` im **Hauptordner** den Satz „Hier geht's zur ersten Übung“ ersetzen durch:
+- [x] In der `index.html` im **Hauptordner** den Satz „Hier geht's zur ersten Übung“ ersetzen durch:
   ```html
   <h2>Meine Übungen</h2>
   <ul>
@@ -372,9 +372,11 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
     <li><a href="uebungen/02-bilder/">Übung 2: Bilder</a></li>
   </ul>
   ```
-- [ ] Commit (`Übung 2: Bilder`) → Push / Sync.
+- [x] Commit (`Übung 2: Bilder`) → Push / Sync.
 
 **Woran ich erkenne, dass es geklappt hat:** Auf der Startseite stehen beide Übungen als Liste; Übung 2 zeigt das Bild. Statt des Bildes erscheint nur der `alt`-Text oder ein kaputtes Symbol? → Pfad oder Dateiname stimmt nicht (Groß-/Kleinschreibung, Endung `.jpg` vs. `.jpeg`).
+
+**Feedback zu Teil 4 und 5 (13. Okt.):** Bild korrekt eingebunden – `src="bilder/waldweg.jpg"` passt exakt zu Ordner und Dateiname, `alt`-Text vorhanden, kein `</img>`. Tipp: Das Foto ist Hochformat; mit `width="600"` wird es ca. 800 px hoch – bei Hochformat wirkt `width="400"` angenehmer. Startseite ist jetzt Inhaltsverzeichnis, „Was ich schon kann“ um Links und Bilder ergänzt. Kleinigkeit: In der Liste steht eine überflüssige Leerzeile vor `</ul>`.
 
 > 🎓 **Für den Unterricht**
 > - **Lernziel:** Schüler binden ein Bild mit `<img src alt>` über einen relativen Pfad ein und legen eine neue Seite nach der Ordnerstruktur an.
@@ -382,13 +384,71 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 > - **Typische Fehler:** Pfad falsch (`bilder/` vergessen oder Ordner falsch benannt); Dateiname mit Großbuchstaben/Leerzeichen (`Foto 1.JPG`) – funktioniert lokal unter Windows, online nicht; `alt` fehlt; riesige Handyfotos (lange Ladezeit); `</img>` geschrieben.
 > - **Differenzierung:** Schnelle Schüler fügen mehrere Bilder ein, machen ein Bild zum Link (`<a href="…"><img …></a>`) oder recherchieren `<figure>` und `<figcaption>`.
 > - **In der Praxis beobachtet:** Upload in den falschen Ordner; Datei `Bilder` statt Ordner `bilder/`; Original-Handyfoto mit 7,5 MB und GPS-Daten. → Vorher gemeinsam einen Ordner anlegen und *ein* vorbereitetes Bild austeilen.
+> - **Ordner-Links und Doppelklick:** Links wie `uebungen/02-bilder/` funktionieren nur mit Server (Live Server, GitHub Pages). Öffnen Schüler die Seite per Doppelklick als Datei, braucht es den vollen Pfad `uebungen/02-bilder/index.html`.
 > - **Urheberrecht & Datenschutz:** Nur eigene Fotos oder Bilder mit freier Lizenz (Quelle angeben). Keine erkennbaren Personen ohne Einwilligung – bei Schülern unter 14 Einwilligung der Eltern. **GPS-Standort vor dem Hochladen entfernen** – ein Foto von zu Hause verrät sonst die Wohnadresse.
 
-## Schritt 13: Tabellen ⬜
+## Schritt 13: Übung 3 – Tabellen ⏳
 
-Neue Übung `uebungen/03-tabellen/`.
+Ziel: Daten übersichtlich in Zeilen und Spalten darstellen – z. B. ein Stundenplan oder eine Wanderliste.
 
-- [ ] `<table>`, `<tr>` (Zeile), `<th>` (Kopfzelle), `<td>` (Zelle)
+**Teil 1: Neue Übung anlegen**
+- [ ] Explorer: in den leeren Bereich tippen → **Neue Datei** (Blatt mit +) → `uebungen/03-tabellen/index.html`
+- [ ] `!` + Enter → `lang="de"`, `<title>Übung 3</title>`, `<h1>Übung 3: Tabellen</h1>`, Link zurück zur Startseite.
+
+**Teil 2: Die erste Tabelle**
+```html
+<h2>Meine Lieblingswege</h2>
+<table>
+  <tr>
+    <th>Weg</th>
+    <th>Länge</th>
+    <th>Dauer</th>
+  </tr>
+  <tr>
+    <td>Waldweg</td>
+    <td>5 km</td>
+    <td>1 Stunde</td>
+  </tr>
+  <tr>
+    <td>Seerunde</td>
+    <td>8 km</td>
+    <td>2 Stunden</td>
+  </tr>
+</table>
+```
+
+| Tag | Bedeutung | Merkhilfe |
+|---|---|---|
+| `<table>` | die ganze Tabelle | *table* = Tabelle |
+| `<tr>` | eine Zeile | *table row* |
+| `<th>` | Kopfzelle (fett, zentriert) | *table header* |
+| `<td>` | normale Zelle | *table data* |
+
+**Merke:** Eine Tabelle wird **Zeile für Zeile** gebaut. Jede Zeile `<tr>` enthält gleich viele Zellen.
+
+**Teil 3: Rahmen sichtbar machen**
+Ohne CSS hat eine Tabelle keine Linien. Für den Anfang reicht ein Attribut:
+- [ ] `<table>` → `<table border="1">`
+
+(Später ersetzen wir das durch CSS – `border` ist ein altes Attribut, aber zum Lernen praktisch.)
+
+**Teil 4: Eigene Tabelle**
+- [ ] Eine zweite Tabelle mit eigenem Inhalt bauen, z. B. Stundenplan (Tage als Spalten), Lieblingsrezepte (Zutat / Menge) oder Hobbys (Hobby / seit wann / wie oft).
+- [ ] Mindestens 3 Spalten und 4 Zeilen.
+
+**Teil 5: Startseite ergänzen**
+- [ ] In der Startseite `index.html` unter „Meine Übungen“: `<li><a href="uebungen/03-tabellen/">Übung 3: Tabellen</a></li>`
+- [ ] In „Was ich schon kann“: `<li>Tabellen mit <code>&lt;table&gt;</code></li>`
+- [ ] Commit (`Übung 3: Tabellen`) → Push / Sync.
+
+**Woran ich erkenne, dass es geklappt hat:** Die Tabelle erscheint mit Rahmen, die Kopfzeile ist fett, alle Zeilen haben gleich viele Spalten. Verrutscht eine Zeile? → Dort fehlt ein `<td>` oder ein `</tr>`.
+
+> 🎓 **Für den Unterricht**
+> - **Lernziel:** Schüler bauen eine Tabelle mit `<table>`, `<tr>`, `<th>`, `<td>` und verstehen den zeilenweisen Aufbau.
+> - **Zeitbedarf:** ca. 30 Minuten.
+> - **Typische Fehler:** `<td>` direkt in `<table>` ohne `<tr>`; Zeilen mit unterschiedlich vielen Zellen; `</tr>` vergessen; Tabellen für Layout missbrauchen (Bild neben Text) – Tabellen sind nur für Daten.
+> - **Einstieg:** Tabelle zuerst auf Papier/Tafel zeichnen und Zeilen nummerieren – dann Zeile für Zeile in HTML „übersetzen“.
+> - **Differenzierung:** Schnelle Schüler verbinden Zellen mit `colspan="2"` bzw. `rowspan="2"` oder ergänzen eine Tabellenüberschrift mit `<caption>`.
 
 ## Schritt 14: Seitenaufbau ⬜
 
@@ -511,6 +571,8 @@ Claude speichert seine Änderungen nie direkt auf `main`, sondern auf seinem eig
 | `<strong>` | fett / wichtig | `<strong>Sport</strong>` |
 | `<a href="…">` | Link | `<a href="https://www.orf.at">ORF</a>` |
 | `<code>` | Code-Schrift | `<code>&lt;p&gt;</code>` |
+| `<img src alt>` | Bild (ohne schließendes Tag) | `<img src="bilder/waldweg.jpg" alt="Waldweg">` |
+| `<table>` `<tr>` `<th>` `<td>` | Tabelle, Zeile, Kopfzelle, Zelle | siehe Schritt 13 |
 
 ### Links
 - **Externe Seite:** volle Adresse mit `https://` → `<a href="https://www.orf.at">ORF</a>`
