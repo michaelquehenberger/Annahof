@@ -151,6 +151,16 @@ Mit der Extension **Live Server** öffnet sich deine Seite im Browser und lädt 
 
 **Wichtig:** Diese Adresse funktioniert nur auf deinem eigenen Rechner. Damit andere deine Seite sehen, musst du sie veröffentlichen (Kapitel 5). Zum Beenden in der Statusleiste auf **Port: 5500** klicken.
 
+**Achtung bei Links auf Unterseiten:** Ein Link wie `<a href="uebungen/01-erste-seite/">` zeigt auf einen **Ordner**. Ein Webserver (GitHub Pages, Live Server) sucht darin automatisch nach `index.html` und zeigt sie an. Öffnest du die Seite aber direkt als Datei (Adresse beginnt mit `file:///`), gibt es keinen Webserver: Der Browser zeigt nur eine Dateiliste oder gar nichts. Darum online „geht's“, lokal nicht.
+
+Lösung: Im Link immer die **Datei** angeben, nicht nur den Ordner:
+
+```html
+<a href="uebungen/01-erste-seite/index.html">Übung 1</a>
+```
+
+So funktioniert der Link überall: lokal, mit Live Server und auf GitHub Pages.
+
 ## Kapitel 5: Website veröffentlichen mit GitHub Pages
 
 Mit GitHub Pages ist deine Website kostenlos unter einer Adresse wie https://NAME.github.io/webseiten-3a/ für alle erreichbar. Alles läuft im Browser, du musst nichts installieren. Dieses Kapitel führt die **Lehrkraft** durch: Die Schüler geben ihren Ordner ab, und du lädst ihn hoch.
@@ -396,6 +406,7 @@ Wer sich daran hält, hat überall denselben Stand.
 | ! + Enter erzeugt kein Grundgerüst  | Datei muss auf .html enden; das ! muss allein in der ersten Zeile stehen              |
 | Explorer links ist leer             | Über File → Open Folder… den Projektordner öffnen, nicht nur eine Datei               |
 | Extension-Suche findet nichts       | Internetverbindung bzw. Freigabe von open-vsx.org im Schulnetz prüfen                 |
+| Unterseite geht online, lokal nicht | Link zeigt auf einen Ordner (`…/`) → `index.html` ergänzen, z. B. `ordner/index.html` (Kapitel 4) |
 
 **Tastenkürzel**
 
