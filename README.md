@@ -8,6 +8,8 @@ https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-d
 
 🛠️ **Manual für den Unterricht – Webseiten bauen mit VSCodium:** [doku/vscodium-manual.md](doku/vscodium-manual.md)
 
+📚 **Stand im Vergleich zum Buch (Müller, *Einstieg in HTML und CSS*):** [doku/stand-buch-vergleich.md](doku/stand-buch-vergleich.md)
+
 ## Ordnerstruktur
 
 ```
