@@ -10,6 +10,8 @@ https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-d
 
 📚 **Stand im Vergleich zum Buch (Müller, *Einstieg in HTML und CSS*):** [doku/stand-buch-vergleich.md](doku/stand-buch-vergleich.md)
 
+🗓️ **Unterrichtsplanung 2026/27 (38 UE, mit Lehrstoffverteilung, Klassenbuch 2025/26 und Buch):** [doku/unterrichtsplanung.md](doku/unterrichtsplanung.md)
+
 ## Ordnerstruktur
 
 ```
