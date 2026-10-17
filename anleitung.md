@@ -463,9 +463,9 @@ Vorgezogen am 17. Okt. nach dem Buch (Müller, Kapitel 3). Ausführliche Anleitu
 **Teil 1: Das erste Stylesheet** ✅
 - [x] Ordner `css/` im Hauptordner, darin `style.css` mit Kommentar und Regel für `body`.
 - [x] Im `<head>` der Startseite eingebunden: `<link href="css/style.css" rel="stylesheet">`
-- [ ] **Fehler korrigieren** (siehe Feedback): `rel=""stylesheet"` → `rel="stylesheet"`
-- [ ] Linkfarbe anpassen, damit Links auf Schwarz lesbar sind (Teil 2).
-- [ ] Übungsseiten verbinden: in `uebungen/…/index.html` → `<link href="../../css/style.css" rel="stylesheet">`
+- [x] **Fehler korrigieren** (siehe Feedback): `rel=""stylesheet"` → `rel="stylesheet"`
+- [x] Lesbarkeit der Links: gelöst durch hellen Hintergrund `whitesmoke` mit schwarzer Schrift (Teil 2 – eigene Linkfarbe – bleibt als Übung).
+- [x] Übungsseiten verbinden: in `uebungen/…/index.html` → `<link href="../../css/style.css" rel="stylesheet">` (Erklärung mit dem Haus-Bild: Manual, Kapitel 11)
 - [ ] Optional (Buch 3.5): `<header>` mit `<h1>` und Slogan auf der Startseite, gestaltet mit `background-color`, `color`, `padding: 1rem;`
 
 **Mein Stylesheet (Stand 17. Okt.)**
@@ -478,6 +478,8 @@ body {
 ```
 
 **Feedback (17. Okt.):** `style.css` ist korrekt aufgebaut: Kommentar, Selektor, geschweifte Klammern, Eigenschaft–Doppelpunkt–Wert–Strichpunkt. **Aber das CSS wirkt noch nicht:** Im `<link>` steht `rel=""stylesheet"` – das doppelte Anführungszeichen beendet den Wert sofort, `rel` ist also leer, und der Browser ignoriert die Datei. Nach der Korrektur wird die Seite schwarz mit weißer Schrift. Dann fällt auf: **Links bleiben blau/lila und sind auf Schwarz kaum lesbar** – das Browser-Stylesheet gibt Links eine eigene Farbe, die `body { color }` nicht überschreibt. Lösung in Teil 2.
+
+**Nachtrag (17. Okt.):** Tippfehler korrigiert, alle Seiten mit `../../css/style.css` verbunden, Farben auf `whitesmoke` / `black` geändert – damit sind auch die Links gut lesbar. Meine Frage dabei: *„Warum wirkt das CSS nur auf der Startseite?“* → Jede Seite braucht ihren eigenen `<link>`; relative Pfade sind im Manual (Kapitel 11) mit dem Haus-Bild erklärt.
 
 **Teil 2: Linkfarbe** (Vorschau auf Selektoren)
 ```css
@@ -492,6 +494,7 @@ a {
 > - **Lernziel:** Schüler legen ein externes Stylesheet an, verbinden es mit `<link>` und schreiben erste Regeln (Selektor, Eigenschaft, Wert).
 > - **Zeitbedarf:** ca. 45 Minuten (Buch Kap. 3).
 > - **Typische Fehler (bei mir beobachtet):** Tippfehler im `<link>` (`rel=""stylesheet"`) – die Seite sieht aus, als wäre nichts passiert, und es gibt **keine Fehlermeldung**. Deshalb früh zeigen: Entwicklerwerkzeuge → **Stile** → ist `style.css` da?
+> - **Typische Frage:** „Warum wirkt das CSS nur auf der Startseite?“ – Jede Seite braucht ihren eigenen `<link>`. Relative Pfade mit dem Haus-Bild erklären (Manual, Kap. 11): `../` = eine Treppe hinauf.
 > - **Weitere typische Fehler:** CSS-Datei statt HTML-Datei im Browser geöffnet; Strichpunkt vergessen; `colour` statt `color`; `1 rem` mit Leerzeichen; Pfad in Unterordnern ohne `../../`.
 > - **Kontrast:** Bei dunklen Hintergründen sofort die Linkfarbe mitgestalten; auf ausreichenden Kontrast achten (Barrierefreiheit).
 > - **Differenzierung:** Schnelle Schüler gestalten `h1`/`h2` mit eigener Farbe, probieren `font-family: sans-serif;` oder wählen Farben über die Farbnamen-Liste.

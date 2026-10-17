@@ -440,6 +440,47 @@ Nach diesem Schritt ändert sich im Browser noch nichts, die Verbindung steht ab
 <link href="../../css/style.css" rel="stylesheet">
 ```
 
+**Wichtig: Jede Seite braucht ihren eigenen `<link>`.** Der Browser lädt jede HTML-Seite für sich. Dass die Startseite `style.css` einbindet, „weiß“ eine Unterseite nicht. Der Vorteil: Alle Seiten verweisen auf **dieselbe** `style.css` – eine Änderung dort wirkt auf der ganzen Website.
+
+**Relative Pfade verstehen: das Haus-Bild**
+
+Ein Pfad ist eine **Wegbeschreibung** – und sie beginnt immer **dort, wo die HTML-Datei liegt**, in der der Link steht. Stell dir das Projekt wie ein Haus mit Stockwerken vor:
+
+```
+🏠 Annahof                     ← Erdgeschoss
+   ├── index.html              ← Startseite (steht im Erdgeschoss)
+   ├── css                     ← ein Raum im Erdgeschoss
+   │    └── style.css
+   └── uebungen                ← Treppe hinunter: Keller
+         └── 01-erste-seite    ← noch eine Treppe tiefer: Keller 2
+               └── index.html  ← HIER STEHST DU
+```
+
+| Im Pfad | Bedeutung | Im Haus |
+|---|---|---|
+| `ordnername/` | in diesen Ordner **hinein** | eine Tür öffnen |
+| `../` | **einen Ordner hinauf** | eine Treppe hinaufgehen |
+| `datei.css` | diese Datei nehmen | das Ding im Raum holen |
+
+Von der Übungsseite zum Stylesheet:
+
+1. `../` → hinauf nach `uebungen`
+2. `../` → hinauf nach `Annahof`
+3. `css/` → hinein in den Ordner `css`
+4. `style.css` → Datei nehmen
+
+Ergibt: **`../../css/style.css`**
+
+| Die HTML-Datei liegt in … | Pfad zum Stylesheet |
+|---|---|
+| `Annahof/` (Startseite) | `css/style.css` |
+| `Annahof/uebungen/01-erste-seite/` | `../../css/style.css` |
+| `Annahof/uebungen/02-bilder/` | `../../css/style.css` |
+
+**Kennst du schon:** Der Zurück-Link `<a href="../../index.html">` in jeder Übung ist dieselbe Wegbeschreibung – zweimal hinauf, dann `index.html`.
+
+**Mini-Test:** In Übung 2 steht `<img src="bilder/waldweg.jpg">` ohne `../`. Warum? → Der Ordner `bilder` liegt *im selben Ordner* wie die Übungsseite; man muss nur hinein, nicht hinauf.
+
 **3. Ein Kommentar am Anfang**
 
 In CSS stehen Kommentare zwischen `/*` und `*/` (in HTML dagegen `<!-- … -->`):
