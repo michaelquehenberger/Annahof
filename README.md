@@ -15,9 +15,12 @@ https://vscode.dev/github/michaelquehenberger/Annahof/tree/main?vscode-lang=de-d
 ## Ordnerstruktur
 
 ```
-index.html        Startseite
-uebungen/         eine Unterordner pro Übung
-bilder/           Bilder für die Seiten
+index.html        Startseite (Inhaltsverzeichnis der Übungen)
+css/              Stylesheet style.css (gilt für alle Seiten)
+bilder/           Bilder, die mehrere Seiten nutzen
+uebungen/         ein Unterordner pro Übung (01-…, 02-…)
+doku/             Manual, Buchvergleich, Unterrichtsplanung
+anleitung.md      Lernprotokoll
 ```
 
 ## Arbeiten in VSCodium

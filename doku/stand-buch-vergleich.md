@@ -15,7 +15,7 @@ Legende: ✅ erledigt · 🟡 teilweise · ⏳ läuft gerade · ⬜ noch offen
 |---|---|---|---|
 | 1 | Wissenswertes über Webseiten (Browser, Editoren) | ✅ | – (unser Editor: VSCodium bzw. vscode.dev) |
 | 2 | HTML kennenlernen: die erste Webseite | 🟡 | `<meta name="description">` (2.7.4), `<header>` mit Überschrift und Slogan (2.9), Entwicklerwerkzeuge im Browser (2.10) |
-| 3 | CSS kennenlernen: die erste Webseite gestalten | ⬜ | **übersprungen**: `style.css` anlegen, mit `<link>` einbinden, Farben für `body` und `header`, `padding` |
+| 3 | CSS kennenlernen: die erste Webseite gestalten | 🟡 | **am 17.10. durchgearbeitet**: `style.css` angelegt, mit `<link>` eingebunden (Tippfehler in `rel` noch zu korrigieren), Farben für `body` ✅. Offen: `<header>` gestalten, `padding`, Entwicklerwerkzeuge |
 | 4 | Überschriften, Absätze, Hervorhebungen, Listen | 🟡 | `<em>`, `<ol>`, verschachtelte Listen, Block- und Inline-Elemente |
 | 5 | Hyperlinks | 🟡 | Links (auch relative) und `target="_blank"` sind erledigt. Offen: Navigation als Liste, Link „Nach oben“, `mailto:`, Links auf PDFs |
 | 6 | Bilder, Audio und Video | ⏳ | `<img>` mit `alt` und `width` ✅. Offen: `<figure>`/`<figcaption>`, `loading="lazy"`, `max-width: 100%`, Bilder für hochauflösende Bildschirme, `<audio>`, `<video>` |
