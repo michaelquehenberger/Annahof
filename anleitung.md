@@ -26,8 +26,8 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 10 | Claudes Änderungen per Pull Request übernehmen | ✅ | – |
 | 11 | Übung 1b: Absatz und Link | ✅ | 1. Sem. UE 7, 13–14 |
 | 12 | Übung 2: Bilder | ✅ | 1. Sem. UE 14–16, 18 |
-| 13 | Übung 3: Tabellen | ⏳ als Nächstes | 1. Sem. UE 24 |
-| 14 | Seitenaufbau | ⬜ | 2. Sem. UE 5–6 |
+| 13 | Übung 3: Tabellen | ✅ | 1. Sem. UE 24 |
+| 14 | Übung 4: Seitenaufbau | ⏳ als Nächstes | 2. Sem. UE 5–6 |
 | 15 | CSS (Teil 1: erstes Stylesheet ✅ vorgezogen) | 🟡 | 1. Sem. UE 25–32 |
 
 Direkt danach: **Grundregeln für Ordnerstruktur und Dateinamen**. Am Ende: **Täglicher Arbeitsablauf** (inkl. Pull Requests und Git-Wörterbuch) und **HTML-Spickzettel** zum Nachschlagen.
@@ -403,15 +403,15 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 > - **Ordner-Links und Doppelklick:** Links wie `uebungen/02-bilder/` funktionieren nur mit Server (Live Server, GitHub Pages). Öffnen Schüler die Seite per Doppelklick als Datei, braucht es den vollen Pfad `uebungen/02-bilder/index.html`.
 > - **Urheberrecht & Datenschutz:** Nur eigene Fotos oder Bilder mit freier Lizenz (Quelle angeben). Keine erkennbaren Personen ohne Einwilligung – bei Schülern unter 14 Einwilligung der Eltern. **GPS-Standort vor dem Hochladen entfernen** – ein Foto von zu Hause verrät sonst die Wohnadresse.
 
-## Schritt 13: Übung 3 – Tabellen ⏳
+## Schritt 13: Übung 3 – Tabellen ✅
 
 *Skriptum: 1. Sem. UE 24*
 
 Ziel: Daten übersichtlich in Zeilen und Spalten darstellen – z. B. ein Stundenplan oder eine Wanderliste.
 
 **Teil 1: Neue Übung anlegen**
-- [ ] Explorer: in den leeren Bereich tippen → **Neue Datei** (Blatt mit +) → `uebungen/03-tabellen/index.html`
-- [ ] `!` + Enter → `lang="de"`, `<title>Übung 3</title>`, `<h1>Übung 3: Tabellen</h1>`, Link zurück zur Startseite.
+- [x] Explorer: in den leeren Bereich tippen → **Neue Datei** (Blatt mit +) → `uebungen/03-tabellen/index.html`
+- [x] `!` + Enter → `lang="de"`, `<title>Übung 3</title>`, `<h1>Übung 3: Tabellen</h1>`, Link zurück zur Startseite.
 
 **Teil 2: Die erste Tabelle**
 ```html
@@ -446,7 +446,7 @@ Ziel: Daten übersichtlich in Zeilen und Spalten darstellen – z. B. ein Stunde
 
 **Teil 3: Rahmen sichtbar machen**
 Ohne CSS hat eine Tabelle keine Linien. Für den Anfang reicht ein Attribut:
-- [ ] `<table>` → `<table border="1">`
+- [x] `<table>` → `<table border="1">`
 
 (Später ersetzen wir das durch CSS – `border` ist ein altes Attribut, aber zum Lernen praktisch.)
 
@@ -455,26 +455,109 @@ Ohne CSS hat eine Tabelle keine Linien. Für den Anfang reicht ein Attribut:
 - [ ] Mindestens 3 Spalten und 4 Zeilen.
 
 **Teil 5: Startseite ergänzen**
-- [ ] In der Startseite `index.html` unter „Meine Übungen“: `<li><a href="uebungen/03-tabellen/">Übung 3: Tabellen</a></li>`
-- [ ] In „Was ich schon kann“: `<li>Tabellen mit <code>&lt;table&gt;</code></li>`
-- [ ] Commit (`Übung 3: Tabellen`) → Push / Sync.
+- [x] In der Startseite `index.html` unter „Meine Übungen“: `<li><a href="uebungen/03-tabellen/">Übung 3: Tabellen</a></li>`
+- [x] In „Was ich schon kann“: `<li>Tabellen mit <code>&lt;table&gt;</code></li>`
+- [x] Commit (`Übung 3: Tabellen`) → Push / Sync.
 
 **Woran ich erkenne, dass es geklappt hat:** Die Tabelle erscheint mit Rahmen, die Kopfzeile ist fett, alle Zeilen haben gleich viele Spalten. Verrutscht eine Zeile? → Dort fehlt ein `<td>` oder ein `</tr>`.
+
+**Feedback (18. Okt.):** Am Laptop in VSCodium gearbeitet, Stylesheet von Anfang an eingebunden (`../../css/style.css`) 👍. Tabelle „Meine Lieblingswege“ mit Kopfzeile und drei Datenzeilen, `border="1"`, Startseite ergänzt (Link + „Tabellen mit `<table>`“). Unterwegs korrigiert: In der zweiten Zeile standen zuerst `<th>` statt `<td>`.
+Noch offen (optional): `<h1>Übung 3: Tabellen</h1>` statt nur „Tabellen“ (einheitlich mit Übung 1 und 2); eigene zweite Tabelle (Teil 4); auf schwarzem Hintergrund sind die Links wieder kaum lesbar → `a { color: gold; }` in `style.css`.
 
 > 🎓 **Für den Unterricht**
 > - **Lernziel:** Schüler bauen eine Tabelle mit `<table>`, `<tr>`, `<th>`, `<td>` und verstehen den zeilenweisen Aufbau.
 > - **Zeitbedarf:** ca. 30 Minuten.
-> - **Typische Fehler:** `<td>` direkt in `<table>` ohne `<tr>`; Zeilen mit unterschiedlich vielen Zellen; `</tr>` vergessen; Tabellen für Layout missbrauchen (Bild neben Text) – Tabellen sind nur für Daten.
+> - **Typische Fehler (bei mir beobachtet):** `<th>` statt `<td>` in den Datenzeilen (Merkhilfe: t**h** = *header*, t**d** = *data*); wieder **Neuer Ordner** statt **Neue Datei** geklickt (es entstand ein Ordner `index.html`); Commit ohne Nachricht → Tab **COMMIT_EDITMSG** öffnet sich; vor dem Commit nicht synchronisiert (↓ im Explorer).
+> - **Weitere typische Fehler:** `<td>` direkt in `<table>` ohne `<tr>`; Zeilen mit unterschiedlich vielen Zellen; `</tr>` vergessen; Tabellen für Layout missbrauchen (Bild neben Text) – Tabellen sind nur für Daten.
 > - **Einstieg:** Tabelle zuerst auf Papier/Tafel zeichnen und Zeilen nummerieren – dann Zeile für Zeile in HTML „übersetzen“.
 > - **Differenzierung:** Schnelle Schüler verbinden Zellen mit `colspan="2"` bzw. `rowspan="2"` oder ergänzen eine Tabellenüberschrift mit `<caption>`.
 
-## Schritt 14: Seitenaufbau ⬜
+## Schritt 14: Übung 4 – Seitenaufbau ⏳
 
-*Skriptum: 2. Sem. UE 5–6*
+*Skriptum: 2. Sem. UE 5–6 · Buch: Müller, Kapitel 7*
 
-Neue Übung `uebungen/04-seitenaufbau/`.
+Ziel: Eine Seite in sinnvolle Bereiche gliedern – so, wie fast jede Website aufgebaut ist. Diese **semantischen Elemente** sagen dem Browser (und Screenreadern, Suchmaschinen), *welche Rolle* ein Bereich hat. Sie sehen ohne CSS noch nicht anders aus.
 
-- [ ] `<header>`, `<nav>`, `<main>`, `<footer>`
+```
+┌──────────────────────────────┐
+│ header  (Kopf: Titel, Logo)  │
+├──────────────────────────────┤
+│ nav     (Navigation: Links)  │
+├──────────────────────────────┤
+│ main    (Hauptinhalt)        │
+├──────────────────────────────┤
+│ footer  (Fuß: Kontakt, ©)    │
+└──────────────────────────────┘
+```
+
+**Teil 1: Neue Übung anlegen**
+- [ ] **Neue Datei** (📄+, nicht 📁+) → `uebungen/04-seitenaufbau/index.html`
+- [ ] `!` + Enter → `lang="de"`, `<title>Übung 4</title>`, `<link href="../../css/style.css" rel="stylesheet">`
+
+**Teil 2: Die vier Bereiche**
+```html
+<body>
+  <header>
+    <h1>Übung 4: Seitenaufbau</h1>
+    <p>Meine erste gegliederte Seite</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../../index.html">Startseite</a></li>
+      <li><a href="../01-erste-seite/index.html">Über mich</a></li>
+      <li><a href="../03-tabellen/index.html">Tabellen</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Willkommen</h2>
+    <p>Hier steht der eigentliche Inhalt der Seite.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Michael</p>
+  </footer>
+</body>
+```
+
+| Element | Bedeutung | Wie oft? |
+|---|---|---|
+| `<header>` | Kopfbereich: Titel, Logo, Slogan | meist 1× oben |
+| `<nav>` | Navigation: die wichtigsten Links | 1× (Hauptnavigation) |
+| `<main>` | Hauptinhalt der Seite | **genau 1×** pro Seite |
+| `<footer>` | Fußbereich: Kontakt, Impressum, © | meist 1× unten |
+| `&copy;` | Sonderzeichen © | – |
+
+**Neu bei den Pfaden:** `../01-erste-seite/index.html` heißt: *einmal* hinauf nach `uebungen`, dann hinein in `01-erste-seite` (Haus-Bild: eine Treppe hinauf, dann die Tür nebenan).
+
+**Teil 3: Mit CSS sichtbar machen** (wie im Buch, Kap. 3.5)
+In `css/style.css`:
+```css
+header {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+}
+
+footer {
+    border-top: 1px solid gray;
+    padding: 1rem;
+}
+```
+
+**Teil 4: Startseite ergänzen**
+- [ ] „Meine Übungen“: `<li><a href="uebungen/04-seitenaufbau/index.html">Übung 4: Seitenaufbau</a></li>`
+- [ ] Commit (`Übung 4: Seitenaufbau`) → Sync.
+
+**Woran ich erkenne, dass es geklappt hat:** Mit Rechtsklick → **Untersuchen** sieht man im HTML die vier Bereiche; der `header` ist blau hinterlegt, der `footer` hat oben eine Linie. Die Navigation führt zu den anderen Übungen.
+
+> 🎓 **Für den Unterricht**
+> - **Lernziel:** Schüler gliedern eine Seite mit `header`, `nav`, `main`, `footer` und verstehen, dass diese Elemente Bedeutung (Semantik) tragen, nicht Aussehen.
+> - **Zeitbedarf:** ca. 50 Minuten (1 UE); mit CSS-Teil eine Doppelstunde.
+> - **Einstieg:** Eine bekannte Website (z. B. orf.at) zeigen und gemeinsam Kopf, Navigation, Inhalt und Fuß einzeichnen.
+> - **Typische Fehler:** Erwartung „man sieht etwas“ – ohne CSS sieht die Seite gleich aus wie vorher; mehrere `<main>`; `<header>` mit `<head>` verwechseln (`<head>` = unsichtbarer Kopf des Dokuments, `<header>` = sichtbarer Kopfbereich); Pfade in der Navigation (`../` vs. `../../`).
+> - **Differenzierung:** Schnelle Schüler ergänzen `<section>` und `<aside>` (Skriptum 2. Sem. UE 6) oder bauen die Navigation in alle Übungsseiten ein.
 
 ## Schritt 15: CSS 🟡
 

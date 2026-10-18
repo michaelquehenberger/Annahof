@@ -550,6 +550,8 @@ Jede Deklaration endet mit einem **Strichpunkt** `;`. Geschweifte Klammern: Wind
 | Änderung erscheint nicht im Browser | Datei speichern (Strg + S), weißer Punkt im Tab muss weg sein                         |
 | „Go Live“ fehlt unten rechts        | Live Server installiert? Eine .html-Datei im Editor öffnen; ggf. VSCodium neu starten |
 | ! + Enter erzeugt kein Grundgerüst  | Datei muss auf .html enden; das ! muss allein in der ersten Zeile stehen              |
+| Tab „COMMIT_EDITMSG“ öffnet sich   | Commit ohne Nachricht geklickt. Tab schließen; Nachricht beim nächsten Mal oben ins Feld der Quellcodeverwaltung tippen, dann **Commit** |
+| ↓ neben Dateien im Explorer         | Auf GitHub gibt es neuere Versionen. Vor dem Weiterarbeiten **Sync Changes** klicken |
 | CSS wirkt nicht                     | `<link href="css/style.css" rel="stylesheet">` genau prüfen (Anführungszeichen, Pfad), Stylesheet speichern (Kapitel 11) |
 | Explorer links ist leer             | Über File → Open Folder… den Projektordner öffnen, nicht nur eine Datei               |
 | Extension-Suche findet nichts       | Internetverbindung bzw. Freigabe von open-vsx.org im Schulnetz prüfen                 |
