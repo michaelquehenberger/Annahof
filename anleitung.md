@@ -10,31 +10,33 @@ Begonnen am 10. Okt. 2026 · @Michael
 
 **Wozu dieses Protokoll:** Es dokumentiert meinen gesamten Lernweg in HTML und CSS – und wird damit gleichzeitig zur Vorlage, um es meinen Schülerinnen und Schülern beizubringen. Jeder Coding-Schritt hat deshalb am Ende einen Kasten **🎓 Für den Unterricht** (Lernziel, Zeitbedarf, typische Fehler, Differenzierung).
 
-**So ist dieses Protokoll aufgebaut:** Die Schritte stehen in der Reihenfolge, in der ich arbeite. Jeder Schritt hat einen Status, eine Anleitung und eine Erfolgskontrolle („Woran ich erkenne, dass es geklappt hat“). Erledigtes hake ich ab: `- [ ]` → `- [x]`.
+**So ist dieses Protokoll aufgebaut:** Die Schritte stehen in der Reihenfolge, in der ich arbeite. Jeder Schritt hat einen Status, eine Anleitung und eine Erfolgskontrolle („Woran ich erkenne, dass es geklappt hat“). Erledigtes hake ich ab: `- [ ]` → `- [x]`. Die Spalte **Skriptum** verweist auf die passende Unterrichtseinheit (UE à 50 Min.) im Jahresskriptum *KOMD Webdesign 1KDA/1KDB* (1. bzw. 2. Semester); „–“ = Werkzeug/Einrichtung, keine eigene UE.
 
-| Nr. | Schritt | Status |
-| --- | --- | --- |
-| 1 | GitHub-Repository anlegen und mit Claude verbinden | ✅ |
-| 2 | vscode.dev am iPad öffnen | ✅ |
-| 3 | Aufbau von index.html verstehen | ✅ |
-| 4 | Erste Änderung und Commit und Push | ✅ |
-| 5 | Repository öffentlich machen | ✅ |
-| 6 | Branch `main` anlegen | ✅ |
-| 7 | GitHub Pages einschalten | ✅ |
-| 8 | Übung 1a: Liste mit Hobbys | ✅ |
-| 9 | Default branch auf `main` stellen | ✅ |
-| 10 | Claudes Änderungen per Pull Request übernehmen | ✅ |
-| 11 | Übung 1b: Absatz und Link | ✅ |
-| 12 | Übung 2: Bilder | ✅ |
-| 13 | Übung 3: Tabellen | ⏳ als Nächstes |
-| 14 | Seitenaufbau | ⬜ |
-| 15 | CSS (Teil 1: erstes Stylesheet ✅ vorgezogen) | 🟡 |
+| Nr. | Schritt | Status | Skriptum |
+| --- | --- | --- | --- |
+| 1 | GitHub-Repository anlegen und mit Claude verbinden | ✅ | – (Manual Kap. 8) |
+| 2 | vscode.dev am iPad öffnen | ✅ | – |
+| 3 | Aufbau von index.html verstehen | ✅ | 1. Sem. UE 6 |
+| 4 | Erste Änderung und Commit und Push | ✅ | 1. Sem. UE 6–7 |
+| 5 | Repository öffentlich machen | ✅ | 2. Sem. UE 22 |
+| 6 | Branch `main` anlegen | ✅ | – |
+| 7 | GitHub Pages einschalten | ✅ | 2. Sem. UE 22 |
+| 8 | Übung 1a: Liste mit Hobbys | ✅ | 1. Sem. UE 8–9 |
+| 9 | Default branch auf `main` stellen | ✅ | – |
+| 10 | Claudes Änderungen per Pull Request übernehmen | ✅ | – |
+| 11 | Übung 1b: Absatz und Link | ✅ | 1. Sem. UE 7, 13–14 |
+| 12 | Übung 2: Bilder | ✅ | 1. Sem. UE 14–16, 18 |
+| 13 | Übung 3: Tabellen | ⏳ als Nächstes | 1. Sem. UE 24 |
+| 14 | Seitenaufbau | ⬜ | 2. Sem. UE 5–6 |
+| 15 | CSS (Teil 1: erstes Stylesheet ✅ vorgezogen) | 🟡 | 1. Sem. UE 25–32 |
 
 Direkt danach: **Grundregeln für Ordnerstruktur und Dateinamen**. Am Ende: **Täglicher Arbeitsablauf** (inkl. Pull Requests und Git-Wörterbuch) und **HTML-Spickzettel** zum Nachschlagen.
 
 ---
 
 ## Grundregeln: Ordnerstruktur und Dateinamen
+
+*Skriptum: 1. Sem. UE 14 (Ordnerstruktur und relative Pfade)*
 
 Diese Regeln gelten für das ganze Projekt. Ich lege sie einmal fest und halte mich immer daran – wer später umbenennt oder verschiebt, macht Links kaputt.
 
@@ -148,6 +150,8 @@ VSCodium gibt es nicht als iPad-App. Am iPad nutze ich VS Code im Browser (Safar
 
 ## Schritt 3: Aufbau von index.html verstehen ✅
 
+*Skriptum: 1. Sem. UE 6*
+
 Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Körper (`body`, alles Sichtbare). Fast jeder Tag wird geöffnet (`<p>`) und wieder geschlossen (`</p>`).
 
 | Zeilen | Tag | Bedeutung |
@@ -167,6 +171,8 @@ Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Kö
 
 ## Schritt 4: Erste Änderung und Commit und Push ✅
 
+*Skriptum: 1. Sem. UE 6–7*
+
 **Mini-Übung:**
 
 - [x] In `index.html` den Text der Überschrift ändern (`Hallo MQ Welt!`).
@@ -183,6 +189,8 @@ Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Kö
 **Woran ich erkenne, dass es geklappt hat:** Unter „Änderungen“ steht nichts mehr.
 
 ## Schritt 5: Repository öffentlich machen ✅
+
+*Skriptum: 2. Sem. UE 22*
 
 GitHub Pages (die Vorschau am iPad) gibt es bei kostenlosen Konten nur für **öffentliche** Repositories.
 
@@ -204,6 +212,8 @@ GitHub Pages (die Vorschau am iPad) gibt es bei kostenlosen Konten nur für **ö
 
 ## Schritt 7: GitHub Pages einschalten ✅
 
+*Skriptum: 2. Sem. UE 22*
+
 - [x] **Settings** → links **Pages**.
 - [x] Source: **Deploy from a branch**.
 - [x] Branch: **`main`**, Ordner: **`/ (root)`** → **Save**.
@@ -213,6 +223,8 @@ GitHub Pages (die Vorschau am iPad) gibt es bei kostenlosen Konten nur für **ö
 > ⚠️ **Nicht anklicken:** „Upgrade“, „Start free for 30 days“, „GitHub Enterprise“, „Configure“ bei Jekyll/Static HTML – unnötig bzw. kostenpflichtig. Steht bei Source plötzlich „GitHub Actions“: zurück auf **Deploy from a branch**.
 
 ## Schritt 8: Übung 1a – Liste mit Hobbys ✅
+
+*Skriptum: 1. Sem. UE 8–9*
 
 Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-erste-seite` → `index.html`. (Beide Dateien heißen `index.html`; welche offen ist, zeigt die Pfadzeile über dem Code.)
 
@@ -278,6 +290,8 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 
 ## Schritt 11: Übung 1b – Absatz und Link ✅
 
+*Skriptum: 1. Sem. UE 7, 13–14*
+
 Datei: `uebungen/01-erste-seite/index.html`
 
 **Vorbereitung**
@@ -325,6 +339,8 @@ Datei: `uebungen/01-erste-seite/index.html`
 > - **Datenschutz:** Im Absatz „über mich“ keine Nachnamen, Adressen oder Fotos – Fantasienamen oder nur Vornamen verwenden.
 
 ## Schritt 12: Übung 2 – Bilder ✅
+
+*Skriptum: 1. Sem. UE 14–16, 18*
 
 Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhaltsverzeichnis.
 
@@ -389,6 +405,8 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 
 ## Schritt 13: Übung 3 – Tabellen ⏳
 
+*Skriptum: 1. Sem. UE 24*
+
 Ziel: Daten übersichtlich in Zeilen und Spalten darstellen – z. B. ein Stundenplan oder eine Wanderliste.
 
 **Teil 1: Neue Übung anlegen**
@@ -452,11 +470,15 @@ Ohne CSS hat eine Tabelle keine Linien. Für den Anfang reicht ein Attribut:
 
 ## Schritt 14: Seitenaufbau ⬜
 
+*Skriptum: 2. Sem. UE 5–6*
+
 Neue Übung `uebungen/04-seitenaufbau/`.
 
 - [ ] `<header>`, `<nav>`, `<main>`, `<footer>`
 
 ## Schritt 15: CSS 🟡
+
+*Skriptum: 1. Sem. UE 25–32*
 
 Vorgezogen am 17. Okt. nach dem Buch (Müller, Kapitel 3). Ausführliche Anleitung für Schüler: **Manual, Kapitel 11** (`doku/vscodium-manual.md`).
 
