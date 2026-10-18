@@ -397,6 +397,152 @@ Wer sich daran hält, hat überall denselben Stand.
 
 **Gut zu wissen:** Bei *vscode.dev* oder *github.dev* im Browser wird beim Commit direkt auf GitHub gespeichert. In GitHub *Codespaces* braucht es wie in VSCodium zusätzlich **Sync**. Einstellungen und Extensions von VS Code und VSCodium sind getrennt und müssen in beiden eingerichtet werden (siehe „Vorab: Welcher Editor?“).
 
+## Kapitel 11: CSS – das erste Stylesheet
+
+*Grundlage: Peter Müller, „Einstieg in HTML und CSS“, Kapitel 3.*
+
+HTML legt fest, **was** auf der Seite steht. **CSS** (*Cascading Style Sheets*) legt fest, **wie** es aussieht: Farben, Schriften, Abstände. Die Gestaltung steht in einer eigenen Datei, dem **Stylesheet**.
+
+**Gut zu wissen:** Jeder Browser hat ein eingebautes Stylesheet. Deshalb sind Überschriften auch ohne eigenes CSS groß und fett, und der Hintergrund ist weiß. Eigene CSS-Regeln überschreiben diese Vorgaben.
+
+**1. Ordner und Datei anlegen**
+
+1. Im Projektordner (dort, wo die Startseite `index.html` liegt) einen Ordner `css` anlegen.
+2. Darin eine neue Datei `style.css` anlegen.
+
+```
+meine-erste-website/
+├── index.html
+└── css/
+    └── style.css
+```
+
+Der Name `style.css` ist üblich, aber nicht Pflicht. Wichtig ist die Endung `.css` und ein Name nach den üblichen Regeln (klein, ohne Leerzeichen und Umlaute).
+
+**2. HTML und CSS verbinden mit `<link>`**
+
+In der `index.html` im `<head>`, direkt vor `</head>`, eine Zeile einfügen:
+
+```html
+<link href="css/style.css" rel="stylesheet">
+```
+
+| Attribut | Bedeutung |
+|---|---|
+| `href="css/style.css"` | Pfad zum Stylesheet (relativ, wie bei Bildern und Links) |
+| `rel="stylesheet"` | *relation*: „Die verknüpfte Datei ist ein Stylesheet.“ |
+
+Nach diesem Schritt ändert sich im Browser noch nichts, die Verbindung steht aber.
+
+**Übungsseiten in Unterordnern** brauchen den Pfad mit `../`, z. B. `uebungen/01-erste-seite/index.html`:
+
+```html
+<link href="../../css/style.css" rel="stylesheet">
+```
+
+**Wichtig: Jede Seite braucht ihren eigenen `<link>`.** Der Browser lädt jede HTML-Seite für sich. Dass die Startseite `style.css` einbindet, „weiß“ eine Unterseite nicht. Der Vorteil: Alle Seiten verweisen auf **dieselbe** `style.css` – eine Änderung dort wirkt auf der ganzen Website.
+
+**Relative Pfade verstehen: das Haus-Bild**
+
+Ein Pfad ist eine **Wegbeschreibung** – und sie beginnt immer **dort, wo die HTML-Datei liegt**, in der der Link steht. Stell dir das Projekt wie ein Haus mit Stockwerken vor:
+
+```
+🏠 Annahof                     ← Erdgeschoss
+   ├── index.html              ← Startseite (steht im Erdgeschoss)
+   ├── css                     ← ein Raum im Erdgeschoss
+   │    └── style.css
+   └── uebungen                ← Treppe hinunter: Keller
+         └── 01-erste-seite    ← noch eine Treppe tiefer: Keller 2
+               └── index.html  ← HIER STEHST DU
+```
+
+| Im Pfad | Bedeutung | Im Haus |
+|---|---|---|
+| `ordnername/` | in diesen Ordner **hinein** | eine Tür öffnen |
+| `../` | **einen Ordner hinauf** | eine Treppe hinaufgehen |
+| `datei.css` | diese Datei nehmen | das Ding im Raum holen |
+
+Von der Übungsseite zum Stylesheet:
+
+1. `../` → hinauf nach `uebungen`
+2. `../` → hinauf nach `Annahof`
+3. `css/` → hinein in den Ordner `css`
+4. `style.css` → Datei nehmen
+
+Ergibt: **`../../css/style.css`**
+
+| Die HTML-Datei liegt in … | Pfad zum Stylesheet |
+|---|---|
+| `Annahof/` (Startseite) | `css/style.css` |
+| `Annahof/uebungen/01-erste-seite/` | `../../css/style.css` |
+| `Annahof/uebungen/02-bilder/` | `../../css/style.css` |
+
+**Kennst du schon:** Der Zurück-Link `<a href="../../index.html">` in jeder Übung ist dieselbe Wegbeschreibung – zweimal hinauf, dann `index.html`.
+
+**Mini-Test:** In Übung 2 steht `<img src="bilder/waldweg.jpg">` ohne `../`. Warum? → Der Ordner `bilder` liegt *im selben Ordner* wie die Übungsseite; man muss nur hinein, nicht hinauf.
+
+**3. Ein Kommentar am Anfang**
+
+In CSS stehen Kommentare zwischen `/*` und `*/` (in HTML dagegen `<!-- … -->`):
+
+```css
+/* Stylesheet für meine erste Website */
+```
+
+**4. Die erste CSS-Regel: Farben für die ganze Seite**
+
+```css
+body {
+  background-color: floralwhite;
+  color: black;
+}
+```
+
+**5. Den Kopfbereich gestalten**
+
+```css
+header {
+  background-color: steelblue;
+  color: white;
+  padding: 1rem;
+}
+```
+
+`padding` ist der **Innenabstand** zwischen Text und Rand. Bei `1rem` kein Leerzeichen zwischen Zahl und Einheit.
+Diese Regel wirkt nur, wenn es in der HTML-Datei ein `<header>`-Element gibt.
+
+**Der Aufbau einer CSS-Regel**
+
+```
+selektor {
+  eigenschaft: wert;
+}
+```
+
+| Begriff | Beispiel | Bedeutung |
+|---|---|---|
+| Selektor | `body` | **welches** HTML-Element gestaltet wird |
+| Deklarationsblock | `{ … }` | alles zwischen den geschweiften Klammern |
+| Deklaration | `color: black;` | eine Anweisung: Eigenschaft + Wert |
+| Eigenschaft | `color` | **was** geändert wird (englisch, amerikanische Schreibweise: `color`, nicht `colour`) |
+| Wert | `black` | **wie** es aussehen soll |
+
+Jede Deklaration endet mit einem **Strichpunkt** `;`. Geschweifte Klammern: Windows **AltGr + 7 / 0**, macOS **Option + 8 / 9**.
+
+**Farben:** Für den Anfang reichen englische Farbnamen (`black`, `white`, `whitesmoke`, `steelblue`, `floralwhite` …). Liste: https://www.w3schools.com/colors/colors_names.asp. Auf **ausreichend Kontrast** zwischen Hintergrund und Schrift achten.
+
+**CSS im Browser untersuchen:** Rechtsklick auf ein Element → **Untersuchen**. Rechts im Bereich **Stile** sieht man, welche CSS-Regeln wirken, auch die des Browser-Stylesheets (*user agent stylesheet*). Werte lassen sich dort testweise ändern; das ändert aber nicht die Datei.
+
+**Ergebnis prüfen:** Stylesheet speichern und die **HTML-Datei** (nicht die CSS-Datei) im Browser bzw. mit **Go Live** ansehen.
+
+**Wirkt das CSS nicht?** Häufige Ursachen:
+
+- **Tippfehler im `<link>`**, z. B. `rel=""stylesheet"` (doppeltes Anführungszeichen) – dann ist `rel` leer und der Browser ignoriert die Datei.
+- **Falscher Pfad** in `href` (Ordner heißt `CSS` statt `css`, `../` fehlt in Unterordnern).
+- **Stylesheet nicht gespeichert** (weißer Punkt im Tab).
+- **Doppelpunkt oder Strichpunkt fehlt**, oder eine geschweifte Klammer ist nicht geschlossen.
+- Prüfen mit den Entwicklerwerkzeugen: Taucht `style.css` unter **Stile** nicht auf, ist die Verbindung kaputt.
+
 ## Anhang: Häufige Probleme und Spickzettel
 
 | Problem                             | Lösung                                                                                |
@@ -404,6 +550,7 @@ Wer sich daran hält, hat überall denselben Stand.
 | Änderung erscheint nicht im Browser | Datei speichern (Strg + S), weißer Punkt im Tab muss weg sein                         |
 | „Go Live“ fehlt unten rechts        | Live Server installiert? Eine .html-Datei im Editor öffnen; ggf. VSCodium neu starten |
 | ! + Enter erzeugt kein Grundgerüst  | Datei muss auf .html enden; das ! muss allein in der ersten Zeile stehen              |
+| CSS wirkt nicht                     | `<link href="css/style.css" rel="stylesheet">` genau prüfen (Anführungszeichen, Pfad), Stylesheet speichern (Kapitel 11) |
 | Explorer links ist leer             | Über File → Open Folder… den Projektordner öffnen, nicht nur eine Datei               |
 | Extension-Suche findet nichts       | Internetverbindung bzw. Freigabe von open-vsx.org im Schulnetz prüfen                 |
 | Unterseite geht online, lokal nicht | Link zeigt auf einen Ordner (`…/`) → `index.html` ergänzen, z. B. `ordner/index.html` (Kapitel 4) |
