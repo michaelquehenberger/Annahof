@@ -12,27 +12,33 @@ Begonnen am 10. Okt. 2026 · @Michael
 
 **So ist dieses Protokoll aufgebaut:** Die Schritte stehen in der Reihenfolge, in der ich arbeite. Jeder Schritt hat einen Status, eine Anleitung und eine Erfolgskontrolle („Woran ich erkenne, dass es geklappt hat“). Erledigtes hake ich ab: `- [ ]` → `- [x]`. Die Spalte **Skriptum** verweist auf die passende Unterrichtseinheit (UE à 50 Min.) im Jahresskriptum *KOMD Webdesign 1KDA/1KDB* (1. bzw. 2. Semester); „–“ = Werkzeug/Einrichtung, keine eigene UE.
 
+<a id="uebersicht"></a>
+
 | Nr. | Schritt | Status | Skriptum |
 | --- | --- | --- | --- |
-| 1 | GitHub-Repository anlegen und mit Claude verbinden | ✅ | – (Manual Kap. 8) |
-| 2 | vscode.dev am iPad öffnen | ✅ | – |
-| 3 | Aufbau von index.html verstehen | ✅ | 1. Sem. UE 6 |
-| 4 | Erste Änderung und Commit und Push | ✅ | 1. Sem. UE 6–7 |
-| 5 | Repository öffentlich machen | ✅ | 2. Sem. UE 22 |
-| 6 | Branch `main` anlegen | ✅ | – |
-| 7 | GitHub Pages einschalten | ✅ | 2. Sem. UE 22 |
-| 8 | Übung 1a: Liste mit Hobbys | ✅ | 1. Sem. UE 8–9 |
-| 9 | Default branch auf `main` stellen | ✅ | – |
-| 10 | Claudes Änderungen per Pull Request übernehmen | ✅ | – |
-| 11 | Übung 1b: Absatz und Link | ✅ | 1. Sem. UE 7, 13–14 |
-| 12 | Übung 2: Bilder | ✅ | 1. Sem. UE 14–16, 18 |
-| 13 | Übung 3: Tabellen | ✅ | 1. Sem. UE 24 |
-| 14 | Übung 4: Seitenaufbau | ⏳ als Nächstes | 2. Sem. UE 5–6 |
-| 15 | CSS (Teil 1: erstes Stylesheet ✅ vorgezogen) | 🟡 | 1. Sem. UE 25–32 |
+| 1 | [GitHub-Repository anlegen und mit Claude verbinden](#schritt-1) | ✅ | – (Manual Kap. 8) |
+| 2 | [vscode.dev am iPad öffnen](#schritt-2) | ✅ | – |
+| 3 | [Aufbau von index.html verstehen](#schritt-3) | ✅ | 1. Sem. UE 6 |
+| 4 | [Erste Änderung und Commit und Push](#schritt-4) | ✅ | 1. Sem. UE 6–7 |
+| 5 | [Repository öffentlich machen](#schritt-5) | ✅ | 2. Sem. UE 22 |
+| 6 | [Branch `main` anlegen](#schritt-6) | ✅ | – |
+| 7 | [GitHub Pages einschalten](#schritt-7) | ✅ | 2. Sem. UE 22 |
+| 8 | [Übung 1a: Liste mit Hobbys](#schritt-8) | ✅ | 1. Sem. UE 8–9 |
+| 9 | [Default branch auf `main` stellen](#schritt-9) | ✅ | – |
+| 10 | [Claudes Änderungen per Pull Request übernehmen](#schritt-10) | ✅ | – |
+| 11 | [Übung 1b: Absatz und Link](#schritt-11) | ✅ | 1. Sem. UE 7, 13–14 |
+| 12 | [Übung 2: Bilder](#schritt-12) | ✅ | 1. Sem. UE 14–16, 18 |
+| 13 | [Übung 3: Tabellen](#schritt-13) | ✅ | 1. Sem. UE 24 |
+| 14 | [Übung 4: Seitenaufbau](#schritt-14) | ⏳ als Nächstes | 2. Sem. UE 5–6 |
+| 15 | [CSS (Teil 1: erstes Stylesheet ✅ vorgezogen)](#schritt-15) | 🟡 | 1. Sem. UE 25–32 |
 
-Direkt danach: **Grundregeln für Ordnerstruktur und Dateinamen**. Am Ende: **Täglicher Arbeitsablauf** (inkl. Pull Requests und Git-Wörterbuch) und **HTML-Spickzettel** zum Nachschlagen.
+**Schnell springen:** [Grundregeln: Ordner & Dateinamen](#grundregeln) · [Code-Bereich oder Chat?](#vorab) · [Täglicher Arbeitsablauf](#arbeitsablauf) (inkl. Pull Requests und Git-Wörterbuch) · [HTML-Spickzettel](#spickzettel) · [Notizen](#notizen)
+
+*Tipp: Einen Schritt in der Tabelle antippen springt direkt dorthin. Zurück nach oben: [↑ Übersicht](#uebersicht)*
 
 ---
+
+<a id="grundregeln"></a>
 
 ## Grundregeln: Ordnerstruktur und Dateinamen
 
@@ -108,6 +114,8 @@ Jede Übungsseite hat unten einen Link zurück: `<a href="../../">Zurück zur St
 
 ---
 
+<a id="vorab"></a>
+
 ## Vorab: Code-Bereich oder normaler Chat?
 
 Der Code-Bereich in Claude ist für Programmierarbeit an echten Projektdateien gedacht, der normale Chat (oder ein Projekt) für Erklären, Planen und Lernen.
@@ -124,6 +132,8 @@ Dieses Protokoll liegt im Repository (`anleitung.md`) – Claude kann es im Code
 
 ---
 
+<a id="schritt-1"></a>
+
 ## Schritt 1: GitHub-Repository anlegen und mit Claude verbinden ✅
 
 GitHub ist ein Online-Speicher für Code-Projekte. Ein Repository ist darin ein Projektordner. Mein Repository heißt **Annahof**.
@@ -134,6 +144,10 @@ GitHub ist ein Online-Speicher für Code-Projekte. Ein Repository ist darin ein 
 - [x] Das Repository auswählen, Sitzung starten.
 
 **Woran ich erkenne, dass es geklappt hat:** Im Titel der Sitzung steht „Annahof“, und es läuft „Sitzung initialisiert“. Claude hat die Startstruktur angelegt: `index.html`, `uebungen/01-erste-seite/index.html`, `bilder/`, `README.md`.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-2"></a>
 
 ## Schritt 2: vscode.dev am iPad öffnen ✅
 
@@ -147,6 +161,10 @@ VSCodium gibt es nicht als iPad-App. Am iPad nutze ich VS Code im Browser (Safar
 **Was ein Branch ist:** Ein Branch (Zweig) ist ein eigener Arbeitsstand. Welcher aktiv ist, steht **unten links in der Statusleiste**. Mein Hauptzweig ist `main` (Schritt 6). Claude arbeitet auf einem eigenen Zweig (`claude/html-basics-vscodium-zio2y2`); seine Änderungen übernehme ich per Pull Request (Schritt 10).
 
 **Einschränkung:** Im Browser-Editor gibt es kein Live Server und kein Terminal. Die Vorschau läuft über GitHub Pages (Schritt 7).
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-3"></a>
 
 ## Schritt 3: Aufbau von index.html verstehen ✅
 
@@ -169,6 +187,10 @@ Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Kö
 
 **Besonderheit:** `&lt;` und `&gt;` sind Ersatzzeichen für `<` und `>`, damit der Browser sie als Text anzeigt und nicht als Tag.
 
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-4"></a>
+
 ## Schritt 4: Erste Änderung und Commit und Push ✅
 
 *Skriptum: 1. Sem. UE 6–7*
@@ -188,6 +210,10 @@ Eine HTML-Seite besteht aus einem Kopf (`head`, unsichtbare Infos) und einem Kö
 
 **Woran ich erkenne, dass es geklappt hat:** Unter „Änderungen“ steht nichts mehr.
 
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-5"></a>
+
 ## Schritt 5: Repository öffentlich machen ✅
 
 *Skriptum: 2. Sem. UE 22*
@@ -203,12 +229,20 @@ GitHub Pages (die Vorschau am iPad) gibt es bei kostenlosen Konten nur für **ö
 
 **Alternative (privat bleiben):** Als Lehrer über https://education.github.com/teachers GitHub Pro gratis beantragen – dann geht Pages auch privat (Prüfung dauert ein paar Tage).
 
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-6"></a>
+
 ## Schritt 6: Branch `main` anlegen ✅
 
 - [x] In vscode.dev unten links auf den Branch-Namen tippen.
 - [x] **„+ Neuen Branch erstellen…“** → `main` eingeben → Enter.
 
 **Woran ich erkenne, dass es geklappt hat:** Unten links steht `main`. Auf GitHub steht „2 Branches“.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-7"></a>
 
 ## Schritt 7: GitHub Pages einschalten ✅
 
@@ -221,6 +255,10 @@ GitHub Pages (die Vorschau am iPad) gibt es bei kostenlosen Konten nur für **ö
 **Woran ich erkenne, dass es geklappt hat:** Oben steht „GitHub Pages source saved“ bzw. „Your site is live at …“. Nach 1–2 Minuten ist die Seite unter https://michaelquehenberger.github.io/Annahof/ erreichbar.
 
 > ⚠️ **Nicht anklicken:** „Upgrade“, „Start free for 30 days“, „GitHub Enterprise“, „Configure“ bei Jekyll/Static HTML – unnötig bzw. kostenpflichtig. Steht bei Source plötzlich „GitHub Actions“: zurück auf **Deploy from a branch**.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-8"></a>
 
 ## Schritt 8: Übung 1a – Liste mit Hobbys ✅
 
@@ -252,6 +290,10 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 > - **Typische Fehler:** `<li>` außerhalb von `<ul>`; `</li>` vergessen; falsch verschachtelt (`<li><strong>…</li></strong>`); Text direkt in `<ul>` statt in `<li>`.
 > - **Differenzierung:** Schnelle Schüler wandeln die Liste in `<ol>` um oder bauen eine verschachtelte Liste (Liste in einem `<li>`).
 
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-9"></a>
+
 ## Schritt 9: Default branch auf `main` stellen ✅
 
 **Warum:** Solange der Default noch der `claude/…`-Zweig ist, landen Änderungen, die ich direkt auf github.com mache, dort – und nicht auf `main` und meiner Webseite.
@@ -263,6 +305,10 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 - [x] Warnhinweis („I understand, update the default branch“) bestätigen.
 
 **Woran ich erkenne, dass es geklappt hat:** Unter „Default branch“ steht `main`. Auf der Code-Seite des Repos ist oben links `main` ausgewählt.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-10"></a>
 
 ## Schritt 10: Claudes Änderungen per Pull Request übernehmen ✅
 
@@ -287,6 +333,10 @@ Datei: `uebungen/01-erste-seite/index.html` – im Explorer: `uebungen` → `01-
 **Woran ich erkenne, dass es geklappt hat:** Im Explorer erscheint `anleitung.md`. Auf github.com ist sie in `main` sichtbar und wird dort schön formatiert angezeigt. In vscode.dev: Rechtsklick auf `anleitung.md` → **Vorschau öffnen**.
 
 **Merke:** Immer wenn Claude etwas für mich ändert, kommt es auf diesem Weg zu mir: Pull Request → Merge → Editor aktualisieren. Ausführlich mit allen Varianten: **Täglicher Arbeitsablauf → Änderungen von Claude übernehmen**.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-11"></a>
 
 ## Schritt 11: Übung 1b – Absatz und Link ✅
 
@@ -337,6 +387,10 @@ Datei: `uebungen/01-erste-seite/index.html`
 > - **Typische Fehler:** `https://` fehlt (Link führt ins Leere bzw. auf eine eigene, nicht vorhandene Datei); Anführungszeichen um die Adresse vergessen; `</a>` fehlt – dann wird der ganze Rest der Seite zum Link; `<a>` steht außerhalb von `<p>`; neuer Inhalt landet an der falschen Stelle (z. B. Link vor statt nach der Liste) – vorher genau zeigen, *nach welcher Zeile* eingefügt wird; uneinheitliche Einrückung – „Dokument formatieren“ als Gewohnheit einüben.
 > - **Differenzierung:** Schnelle Schüler setzen einen zweiten Link auf eine eigene Seite (relativer Pfad, z. B. `../../index.html`) und vergleichen: Wann braucht man `https://`, wann nicht?
 > - **Datenschutz:** Im Absatz „über mich“ keine Nachnamen, Adressen oder Fotos – Fantasienamen oder nur Vornamen verwenden.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-12"></a>
 
 ## Schritt 12: Übung 2 – Bilder ✅
 
@@ -402,6 +456,10 @@ Ziel: eine neue Übungsseite mit Bildern – und die Startseite wird zum Inhalts
 > - **In der Praxis beobachtet:** Upload in den falschen Ordner; Datei `Bilder` statt Ordner `bilder/`; Original-Handyfoto mit 7,5 MB und GPS-Daten. → Vorher gemeinsam einen Ordner anlegen und *ein* vorbereitetes Bild austeilen.
 > - **Ordner-Links und Doppelklick:** Links wie `uebungen/02-bilder/` funktionieren nur mit Server (Live Server, GitHub Pages). Öffnen Schüler die Seite per Doppelklick als Datei, braucht es den vollen Pfad `uebungen/02-bilder/index.html`.
 > - **Urheberrecht & Datenschutz:** Nur eigene Fotos oder Bilder mit freier Lizenz (Quelle angeben). Keine erkennbaren Personen ohne Einwilligung – bei Schülern unter 14 Einwilligung der Eltern. **GPS-Standort vor dem Hochladen entfernen** – ein Foto von zu Hause verrät sonst die Wohnadresse.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-13"></a>
 
 ## Schritt 13: Übung 3 – Tabellen ✅
 
@@ -471,6 +529,10 @@ Noch offen (optional): `<h1>Übung 3: Tabellen</h1>` statt nur „Tabellen“ (e
 > - **Weitere typische Fehler:** `<td>` direkt in `<table>` ohne `<tr>`; Zeilen mit unterschiedlich vielen Zellen; `</tr>` vergessen; Tabellen für Layout missbrauchen (Bild neben Text) – Tabellen sind nur für Daten.
 > - **Einstieg:** Tabelle zuerst auf Papier/Tafel zeichnen und Zeilen nummerieren – dann Zeile für Zeile in HTML „übersetzen“.
 > - **Differenzierung:** Schnelle Schüler verbinden Zellen mit `colspan="2"` bzw. `rowspan="2"` oder ergänzen eine Tabellenüberschrift mit `<caption>`.
+
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-14"></a>
 
 ## Schritt 14: Übung 4 – Seitenaufbau ⏳
 
@@ -559,6 +621,10 @@ footer {
 > - **Typische Fehler:** Erwartung „man sieht etwas“ – ohne CSS sieht die Seite gleich aus wie vorher; mehrere `<main>`; `<header>` mit `<head>` verwechseln (`<head>` = unsichtbarer Kopf des Dokuments, `<header>` = sichtbarer Kopfbereich); Pfade in der Navigation (`../` vs. `../../`).
 > - **Differenzierung:** Schnelle Schüler ergänzen `<section>` und `<aside>` (Skriptum 2. Sem. UE 6) oder bauen die Navigation in alle Übungsseiten ein.
 
+[↑ zur Übersicht](#uebersicht)
+
+<a id="schritt-15"></a>
+
 ## Schritt 15: CSS 🟡
 
 *Skriptum: 1. Sem. UE 25–32*
@@ -606,11 +672,16 @@ a {
 
 ---
 
+[↑ zur Übersicht](#uebersicht)
+
+<a id="arbeitsablauf"></a>
+
 # Täglicher Arbeitsablauf
 
 ### Am iPad – vscode.dev
 1. Editor-Link öffnen.
 2. **Unten links prüfen: steht `main`?** Wenn nicht → antippen und `main` wählen.
+   **Steht dort eine Zahl mit ↓** (z. B. `main 🔄 17↓`)? → Auf GitHub gibt es neuere Commits (z. B. vom Laptop). **Zuerst darauf tippen und synchronisieren**, dann arbeiten. Ein `*` hinter `main` heißt: noch nicht committete Änderungen.
 3. Datei im **Explorer** öffnen und bearbeiten.
 4. Quellcodeverwaltung → Nachricht → **Commit und Push**.
 5. Ca. 1 Minute warten → Tab mit meiner Webseite **neu laden** (ggf. zweimal).
@@ -683,6 +754,8 @@ Claude speichert seine Änderungen nie direkt auf `main`, sondern auf seinem eig
 
 ---
 
+<a id="spickzettel"></a>
+
 # HTML-Spickzettel
 
 ### Grundgerüst – jede Seite
@@ -728,6 +801,8 @@ Claude speichert seine Änderungen nie direkt auf `main`, sondern auf seinem eig
 - `&lt;` und `&gt;` zeigen `<` und `>` als Text an
 
 ---
+
+<a id="notizen"></a>
 
 ## Notizen
 
