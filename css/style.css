@@ -3,3 +3,14 @@ body {
     background-color: black;
     color: white;
 }
+
+header {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+}
+ 
+footer {
+    border-top: 1px solid gray;
+    padding: 1rem;
+}
