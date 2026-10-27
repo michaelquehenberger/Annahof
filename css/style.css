@@ -1,16 +1,18 @@
 /* stylesheet für meine erste website HTML und CSS */
 body {
     background-color: black;
-    color: white;
+    color: whitesmoke;
 }
 
 header {
-    background-color: steelblue;
+    background-color: darkslategrey;
     color: white;
     padding: 1rem;
 }
- 
+ a {
+ color: gold
+}
 footer {
-    border-top: 1px solid yellowgreen;
+    border-top: 1px solid dimgrey;
     padding: 1rem;
 }
