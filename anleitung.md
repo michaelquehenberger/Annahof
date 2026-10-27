@@ -29,8 +29,8 @@ Begonnen am 10. Okt. 2026 · @Michael
 | 11 | [Übung 1b: Absatz und Link](#schritt-11) | ✅ | 1. Sem. UE 7, 13–14 |
 | 12 | [Übung 2: Bilder](#schritt-12) | ✅ | 1. Sem. UE 14–16, 18 |
 | 13 | [Übung 3: Tabellen](#schritt-13) | ✅ | 1. Sem. UE 24 |
-| 14 | [Übung 4: Seitenaufbau](#schritt-14) | ⏳ als Nächstes | 2. Sem. UE 5–6 |
-| 15 | [CSS (Teil 1: erstes Stylesheet ✅ vorgezogen)](#schritt-15) | 🟡 | 1. Sem. UE 25–32 |
+| 14 | [Übung 4: Seitenaufbau](#schritt-14) | ✅ | 2. Sem. UE 5–6 |
+| 15 | [CSS: Stylesheet, Links, Selektoren, Schrift](#schritt-15) | ⏳ als Nächstes | 1. Sem. UE 25–32 |
 
 **Schnell springen:** [Grundregeln: Ordner & Dateinamen](#grundregeln) · [Code-Bereich oder Chat?](#vorab) · [Täglicher Arbeitsablauf](#arbeitsablauf) (inkl. Pull Requests und Git-Wörterbuch) · [HTML-Spickzettel](#spickzettel) · [Notizen](#notizen)
 
@@ -534,7 +534,7 @@ Noch offen (optional): `<h1>Übung 3: Tabellen</h1>` statt nur „Tabellen“ (e
 
 <a id="schritt-14"></a>
 
-## Schritt 14: Übung 4 – Seitenaufbau ⏳
+## Schritt 14: Übung 4 – Seitenaufbau ✅
 
 *Skriptum: 2. Sem. UE 5–6 · Buch: Müller, Kapitel 7*
 
@@ -553,8 +553,8 @@ Ziel: Eine Seite in sinnvolle Bereiche gliedern – so, wie fast jede Website au
 ```
 
 **Teil 1: Neue Übung anlegen**
-- [ ] **Neue Datei** (📄+, nicht 📁+) → `uebungen/04-seitenaufbau/index.html`
-- [ ] `!` + Enter → `lang="de"`, `<title>Übung 4</title>`, `<link href="../../css/style.css" rel="stylesheet">`
+- [x] **Neue Datei** (📄+, nicht 📁+) → `uebungen/04-seitenaufbau/index.html`
+- [x] `!` + Enter → `lang="de"`, `<title>Übung 4</title>`, `<link href="../../css/style.css" rel="stylesheet">`
 
 **Teil 2: Die vier Bereiche**
 ```html
@@ -609,23 +609,29 @@ footer {
 ```
 
 **Teil 4: Startseite ergänzen**
-- [ ] „Meine Übungen“: `<li><a href="uebungen/04-seitenaufbau/index.html">Übung 4: Seitenaufbau</a></li>`
-- [ ] Commit (`Übung 4: Seitenaufbau`) → Sync.
+- [x] „Meine Übungen“: `<li><a href="uebungen/04-seitenaufbau/index.html">Übung 4: Seitenaufbau</a></li>`
+- [x] Commit (`Übung 4: Seitenaufbau`) → Sync.
 
 **Woran ich erkenne, dass es geklappt hat:** Mit Rechtsklick → **Untersuchen** sieht man im HTML die vier Bereiche; der `header` ist blau hinterlegt, der `footer` hat oben eine Linie. Die Navigation führt zu den anderen Übungen.
+
+**Feedback (27. Okt.):** Alle vier Bereiche korrekt (`header`, `nav`, `main`, `footer`), Navigation mit richtigen Pfaden (`../../index.html`, `../01-erste-seite/…`), `&copy;` richtig verwendet, CSS für `header` (blau, `padding`) und `footer` (Linie oben) wirkt. Startseite verlinkt Übung 4. Kleinigkeiten:
+- `<html lang="en">` → **`lang="de"`** (vom Grundgerüst übrig geblieben)
+- Tippfehler auf der Startseite: „Seiten**ai**fbau“ → „Seiten**au**fbau“
+- Die Navigationslinks sind auf Schwarz kaum lesbar (dunkelblau) → Schritt 15, Teil 2
 
 > 🎓 **Für den Unterricht**
 > - **Lernziel:** Schüler gliedern eine Seite mit `header`, `nav`, `main`, `footer` und verstehen, dass diese Elemente Bedeutung (Semantik) tragen, nicht Aussehen.
 > - **Zeitbedarf:** ca. 50 Minuten (1 UE); mit CSS-Teil eine Doppelstunde.
 > - **Einstieg:** Eine bekannte Website (z. B. orf.at) zeigen und gemeinsam Kopf, Navigation, Inhalt und Fuß einzeichnen.
-> - **Typische Fehler:** Erwartung „man sieht etwas“ – ohne CSS sieht die Seite gleich aus wie vorher; mehrere `<main>`; `<header>` mit `<head>` verwechseln (`<head>` = unsichtbarer Kopf des Dokuments, `<header>` = sichtbarer Kopfbereich); Pfade in der Navigation (`../` vs. `../../`).
+> - **Typische Fehler (bei mir beobachtet):** `lang="en"` aus dem `!`-Grundgerüst nicht angepasst – nach `!` + Enter immer zuerst `lang="de"` setzen.
+> - **Weitere typische Fehler:** Erwartung „man sieht etwas“ – ohne CSS sieht die Seite gleich aus wie vorher; mehrere `<main>`; `<header>` mit `<head>` verwechseln (`<head>` = unsichtbarer Kopf des Dokuments, `<header>` = sichtbarer Kopfbereich); Pfade in der Navigation (`../` vs. `../../`).
 > - **Differenzierung:** Schnelle Schüler ergänzen `<section>` und `<aside>` (Skriptum 2. Sem. UE 6) oder bauen die Navigation in alle Übungsseiten ein.
 
 [↑ zur Übersicht](#uebersicht)
 
 <a id="schritt-15"></a>
 
-## Schritt 15: CSS 🟡
+## Schritt 15: CSS ⏳
 
 *Skriptum: 1. Sem. UE 25–32*
 
@@ -652,14 +658,97 @@ body {
 
 **Nachtrag (17. Okt.):** Tippfehler korrigiert, alle Seiten mit `../../css/style.css` verbunden, Farben auf `whitesmoke` / `black` geändert – damit sind auch die Links gut lesbar. Meine Frage dabei: *„Warum wirkt das CSS nur auf der Startseite?“* → Jede Seite braucht ihren eigenen `<link>`; relative Pfade sind im Manual (Kapitel 11) mit dem Haus-Bild erklärt.
 
-**Teil 2: Linkfarbe** (Vorschau auf Selektoren)
+**Mein Stylesheet (Stand 27. Okt.)**
+```css
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+}
+
+footer {
+    border-top: 1px solid gray;
+    padding: 1rem;
+}
+```
+
+*Skriptum 1. Sem. UE 28–31 · Buch: Müller, Kapitel 12–15*
+
+**Teil 2: Links lesbar machen – Element-Selektor `a`**
+
+Das Browser-Stylesheet gibt Links eine eigene Farbe (blau, besucht lila). `body { color: white; }` überschreibt das **nicht**, weil die Regel für `a` genauer ist. Also bekommt `a` eine eigene Regel:
 ```css
 a {
     color: gold;
 }
 ```
+- [ ] Regel in `style.css` ergänzen → Links auf allen Seiten gut lesbar.
 
-**Woran ich erkenne, dass es geklappt hat:** Schwarzer Hintergrund, weiße Schrift, gut lesbare Links. Mit Rechtsklick → **Untersuchen** erscheint `style.css` rechts unter **Stile**.
+**Teil 3: Klassen – nur bestimmte Elemente gestalten**
+
+Ein **Element-Selektor** (`p`, `a`, `h1`) trifft *alle* Elemente dieser Art. Soll nur *ein bestimmter* Absatz anders aussehen, bekommt er im HTML eine **Klasse**:
+```html
+<p class="hinweis">Diese Seite ist eine Übung.</p>
+```
+Im CSS steht vor dem Klassennamen ein **Punkt**:
+```css
+.hinweis {
+    background-color: gold;
+    color: black;
+    padding: 0.5rem;
+}
+```
+- [ ] In Übung 4 im `<main>` einen Absatz mit `class="hinweis"` ergänzen und die Regel in `style.css` schreiben.
+
+**Teil 4: ID – ein einziges Element**
+
+Eine **ID** gibt es pro Seite nur **einmal**. Im CSS steht davor eine **Raute** `#`:
+```html
+<h2 id="willkommen">Willkommen</h2>
+```
+```css
+#willkommen {
+    color: gold;
+}
+```
+Faustregel: Für Gestaltung meist **Klassen** verwenden; IDs eher für Sprungmarken (wie im Lernprotokoll: `href="#schritt-15"`).
+
+| Selektor | Schreibweise | trifft … | Beispiel |
+|---|---|---|---|
+| Element | `p` | alle `<p>` | `a { color: gold; }` |
+| Klasse | `.name` | alle Elemente mit `class="name"` (beliebig oft) | `.hinweis { … }` |
+| ID | `#name` | das eine Element mit `id="name"` | `#willkommen { … }` |
+
+**Teil 5: Schrift**
+```css
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+```
+| Eigenschaft | Bedeutung |
+|---|---|
+| `font-family` | Schriftart; mehrere als Ersatz, am Ende immer eine Gattung (`sans-serif` = ohne Serifen, `serif` = mit Serifen) |
+| `font-size` | Schriftgröße |
+| `line-height` | Zeilenabstand (1.5 = 1,5-fach) |
+- [ ] In die bestehende `body`-Regel ergänzen (nicht eine zweite `body`-Regel anlegen).
+
+**Teil 6: CSS im Browser untersuchen**
+- [ ] Rechtsklick auf einen Link → **Untersuchen** → rechts unter **Stile** die Regel `a { color: gold; }` finden.
+- [ ] Testweise einen Farbwert direkt dort ändern (ändert nur die Ansicht, nicht die Datei).
+- [ ] Beobachten: Schrift und Farbe von `body` werden an `p`, `li`, `h2` **vererbt** (Skriptum UE 31).
+
+**Abschluss**
+- [ ] Startseite: „Was ich schon kann“ → `<li>CSS: Farben, Klassen und Schrift</li>`
+- [ ] Commit (`CSS: Links, Klassen, Schrift`) → Sync.
+
+**Woran ich erkenne, dass es geklappt hat:** Links sind auf allen Seiten gut lesbar; der Hinweis-Absatz in Übung 4 ist gelb hinterlegt; die Schrift ist überall serifenlos. Mit Rechtsklick → **Untersuchen** erscheint `style.css` rechts unter **Stile**.
 
 > 🎓 **Für den Unterricht**
 > - **Lernziel:** Schüler legen ein externes Stylesheet an, verbinden es mit `<link>` und schreiben erste Regeln (Selektor, Eigenschaft, Wert).
@@ -668,6 +757,8 @@ a {
 > - **Typische Frage:** „Warum wirkt das CSS nur auf der Startseite?“ – Jede Seite braucht ihren eigenen `<link>`. Relative Pfade mit dem Haus-Bild erklären (Manual, Kap. 11): `../` = eine Treppe hinauf.
 > - **Weitere typische Fehler:** CSS-Datei statt HTML-Datei im Browser geöffnet; Strichpunkt vergessen; `colour` statt `color`; `1 rem` mit Leerzeichen; Pfad in Unterordnern ohne `../../`.
 > - **Kontrast:** Bei dunklen Hintergründen sofort die Linkfarbe mitgestalten; auf ausreichenden Kontrast achten (Barrierefreiheit).
+> - **Selektoren (UE 28):** Punkt `.` für Klassen und Raute `#` für IDs werden oft vergessen oder verwechselt; Klassennamen wie Dateinamen schreiben (klein, ohne Leerzeichen/Umlaute); im HTML **ohne** Punkt: `class="hinweis"`, im CSS **mit** Punkt: `.hinweis`.
+> - **Häufig:** zweite `body`-Regel angelegt statt die bestehende zu ergänzen – funktioniert, wird aber unübersichtlich.
 > - **Differenzierung:** Schnelle Schüler gestalten `h1`/`h2` mit eigener Farbe, probieren `font-family: sans-serif;` oder wählen Farben über die Farbnamen-Liste.
 
 ---
